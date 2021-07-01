@@ -1,6 +1,6 @@
 <template>
   <div class="posts__container">
-    <post-each v-for="(valud, id) in posts" :key="id" :post="value" />
+    <post-each v-for="(value, id) in posts" :key="id" :post="value" />
   </div>
 </template>
 
