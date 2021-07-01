@@ -1,6 +1,6 @@
 <template>
   <div class="post--each__container">
-    <div class="post--each--content py-6 border-b flex">
+    <div class="post--each--content py-6 border-b dark:border-gray-700 flex">
       <div class="left--content w-1/6 pt-1">
         <span
           class="
