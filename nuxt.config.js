@@ -15,8 +15,8 @@ export default {
   },
 
   css: [
+    '~/assets/scss/app.scss',
     '~/assets/css/fonts/inter.css',
-    '~/assets/scss/app.scss'
   ],
 
   plugins: [
@@ -42,5 +42,11 @@ export default {
   },
 
   build: {
-  }
+  },
+
+  // Change port
+  server: {
+    port: 8080,
+    host: '0.0.0.0'
+  },
 }
