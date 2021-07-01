@@ -1,10 +1,14 @@
 <template>
   <div class="post--each__container">
-    <div class="post--each--content py-6 border-b-2 flex">
-      <div class="left--content">
-        {{ getReadableDate(post.updated_at) }}
+    <div class="post--each--content py-6 border-b flex">
+      <div class="left--content w-1/6">
+        <span class="date--content text-lg text-gray-600 font-medium">{{
+          getReadableDate(post.updated_at)
+        }}</span>
       </div>
-      <h1 class="text-4xl font-semibold">{{ post.title }}</h1>
+      <div class="right--content w-5/6">
+        <h1 class="text-4xl font-semibold">{{ post.title }}</h1>
+      </div>
     </div>
   </div>
 </template>
