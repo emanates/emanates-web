@@ -1,11 +1,16 @@
 <template>
-  <posts-container :posts="posts" />
+  <div>
+    <Header />
+    <posts-container :posts="posts" />
+  </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
 import { posts } from '../mixins/posts'
 
 export default {
+  components: { Header },
   mixins: [posts],
   data() {
     return {
