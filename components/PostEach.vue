@@ -21,7 +21,8 @@
           <a
             rel="noreferrer noopener"
             :href="post.user.html_url"
-            class="text-gray-600 dark:text-gray-400 font-medium"
+            target="_blank"
+            class="text-gray-600 dark:text-gray-400 font-medium hover:underline"
             >{{ post.user.login }}</a
           >
         </p>
