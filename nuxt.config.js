@@ -15,7 +15,8 @@ export default {
   },
 
   css: [
-    '~/assets/css/fonts/inter.css'
+    '~/assets/css/fonts/inter.css',
+    '~/assets/scss/app.scss'
   ],
 
   plugins: [
