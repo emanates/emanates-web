@@ -13,7 +13,7 @@
         >
       </div>
       <div class="right--content w-5/6">
-        <h1 class="text-4xl font-semibold dark:text-gray-200">
+        <h1 class="text-3xl font-semibold dark:text-gray-200">
           {{ post.title }}
         </h1>
         <p class="author--name mt-2">
