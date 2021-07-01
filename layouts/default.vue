@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="dark:bg-gray-800">
     <Navbar />
     <div
       class="
