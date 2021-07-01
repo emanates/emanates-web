@@ -18,9 +18,12 @@
         </h1>
         <p class="author--name mt-2">
           <span class="text-gray-400 dark:text-gray-600">by</span>
-          <span class="text-gray-600 dark:text-gray-400 font-medium">{{
-            post.user.login
-          }}</span>
+          <a
+            rel="noreferrer noopener"
+            :href="post.user.html_url"
+            class="text-gray-600 dark:text-gray-400 font-medium"
+            >{{ post.user.login }}</a
+          >
         </p>
       </div>
     </div>
