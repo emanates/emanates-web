@@ -1,9 +1,18 @@
 <template>
   <div class="navbar">
-    <div class="bg-white py-2 w-full border-b border-gray-300">
-      <div class="navbar--content w-3/5 mr-auto ml-auto">
+    <div
+      class="
+        bg-white
+        dark:bg-gray-900
+        py-2
+        w-full
+        border-b border-gray-300
+        dark:border-gray-700
+      "
+    >
+      <div class="navbar--content w-3/4 mr-auto ml-auto">
         <div class="brand">
-          <h1 class="font-bold text-lg">Blog</h1>
+          <h1 class="font-bold text-lg dark:text-white">Blog</h1>
           <p class="text-xs text-gray-400">Powered by Emanates</p>
         </div>
       </div>
