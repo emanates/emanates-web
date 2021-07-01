@@ -13,7 +13,9 @@
         >
       </div>
       <div class="right--content w-5/6">
-        <h1 class="text-4xl font-semibold dark:text-white">{{ post.title }}</h1>
+        <h1 class="text-4xl font-semibold dark:text-gray-200">
+          {{ post.title }}
+        </h1>
         <p class="author--name mt-2">
           <span class="text-gray-400 dark:text-gray-600">by</span>
           <span class="text-gray-600 dark:text-gray-400 font-medium">{{
