@@ -1,7 +1,7 @@
 <template>
   <div class="post--each__container">
     <div class="post--each--content py-6 border-b flex">
-      <div class="left--content w-1/6">
+      <div class="left--content w-1/6 pt-1">
         <span class="date--content text-lg text-gray-600 font-medium">{{
           getReadableDate(post.updated_at)
         }}</span>
