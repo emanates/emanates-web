@@ -1,5 +1,5 @@
 <template>
-  <posts-container />
+  <posts-container :posts="posts" />
 </template>
 
 <script>
