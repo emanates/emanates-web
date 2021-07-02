@@ -16,7 +16,7 @@
         <h1 class="text-3xl font-semibold dark:text-gray-200">
           {{ post.title }}
         </h1>
-        <p class="author--name mt-2">
+        <p class="author--name mt-4">
           <span class="text-gray-400 dark:text-gray-600">by</span>
           <a
             rel="noreferrer noopener"

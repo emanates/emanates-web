@@ -16,7 +16,8 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "snarkdown": "^2.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
