@@ -13,13 +13,7 @@
         >
       </div>
       <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4">
-        <div
-          v-if="post.labels.length"
-          class="label py-1 px-3 inline-flex rounded-2xl"
-          :class="getColorClassForLabel(post.labels[0].color)"
-        >
-          # {{ post.labels[0].name }}
-        </div>
+        <Label v-if="post.labels.length" :label="post.labels[0]" />
         <h1 class="text-3xl font-semibold dark:text-gray-200 mt-6">
           {{ post.title }}
         </h1>
@@ -39,12 +33,12 @@
 </template>
 
 <script>
-import { markdownRenderer } from '@/mixins/markdown'
-import { labels } from '@/mixins/labels'
+import Label from './Label.vue'
 
 export default {
   name: 'PostEach',
-  mixins: [markdownRenderer, labels],
+  components: { Label },
+  mixins: [],
   props: {
     post: {
       type: Object,
@@ -60,13 +54,6 @@ export default {
       return new Date(date).toLocaleDateString('en-US', {
         dateStyle: 'medium',
       })
-    },
-    getColorClassForLabel(githubColorCode) {
-      /**
-       * Get the color code mapping for the label as
-       * returned by GitHub.
-       */
-      return this.getColor(githubColorCode)
     },
   },
 }
