@@ -18,6 +18,7 @@
           xl:text-7xl
           md:text-6xl
           text-4xl
+          xl:leading-relaxed
           md:leading-relaxed
           leading-normal
           font-black
