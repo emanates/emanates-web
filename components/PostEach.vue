@@ -1,7 +1,7 @@
 <template>
   <div class="post--each__container">
     <div class="post--each--content py-6 border-b dark:border-gray-700 flex">
-      <div class="left--content 2xl:w-1/5 xl:w-1/6 pt-1">
+      <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4 pt-1">
         <span
           class="
             date--content
@@ -12,7 +12,7 @@
           >{{ getReadableDate(post.created_at) }}</span
         >
       </div>
-      <div class="right--content 2xl:w-4/5 xl:w-5/6">
+      <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4">
         <h1 class="text-3xl font-semibold dark:text-gray-200">
           {{ post.title }}
         </h1>
