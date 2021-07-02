@@ -13,10 +13,17 @@
         >
       </div>
       <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4">
-        <h1 class="text-3xl font-semibold dark:text-gray-200">
+        <div
+          v-if="post.labels.length"
+          class="label py-1 px-3 inline-flex rounded-2xl"
+          :class="getColorClassForLabel(post.labels[0].color)"
+        >
+          # {{ post.labels[0].name }}
+        </div>
+        <h1 class="text-3xl font-semibold dark:text-gray-200 mt-6">
           {{ post.title }}
         </h1>
-        <p class="author--name mt-2">
+        <p class="author--name mt-3">
           <span class="text-gray-400 dark:text-gray-600">by</span>
           <a
             rel="noreferrer noopener"
@@ -26,13 +33,6 @@
             >{{ post.user.login }}</a
           >
         </p>
-        <div
-          v-if="post.labels.length"
-          class="label mt-3 py-1 px-2 inline-flex rounded-lg"
-          :class="getColorClassForLabel(post.labels[0].color)"
-        >
-          # {{ post.labels[0].name }}
-        </div>
       </div>
     </div>
   </div>
