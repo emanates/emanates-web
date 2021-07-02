@@ -1,4 +1,4 @@
-import { snarkdown } from "snarkdown";
+import snarkdown from "snarkdown";
 
 export const markdownRenderer = {
     data: () => {

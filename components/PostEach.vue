@@ -32,8 +32,11 @@
 </template>
 
 <script>
+import { markdownRenderer } from '@/mixins/markdown'
+
 export default {
   name: 'PostEach',
+  mixins: [markdownRenderer],
   props: {
     post: {
       type: Object,
