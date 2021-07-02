@@ -1,6 +1,14 @@
 <template>
   <div class="post--each__container">
-    <div class="post--each--content py-8 border-b dark:border-gray-700 flex">
+    <div
+      class="
+        post--each--content
+        py-8
+        border-b
+        dark:border-gray-700
+        flex flex-wrap
+      "
+    >
       <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4">
         <span
           class="
@@ -12,9 +20,8 @@
           >{{ getReadableDate(post.created_at) }}</span
         >
       </div>
-      <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4">
-        <Label v-if="post.labels.length" :label="post.labels[0]" />
-        <h1 class="text-3xl font-semibold dark:text-gray-200 mt-6">
+      <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4 md:mt-0 mt-3">
+        <h1 class="md:text-3xl text-2xl font-semibold dark:text-gray-200">
           {{ post.title }}
         </h1>
         <p class="author--name mt-3">
@@ -27,6 +34,7 @@
             >{{ post.user.login }}</a
           >
         </p>
+        <Label v-if="post.labels.length" :label="post.labels[0]" class="mt-6" />
       </div>
     </div>
   </div>
