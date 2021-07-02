@@ -1,7 +1,7 @@
 <template>
   <div class="post--each__container">
     <div class="post--each--content py-8 border-b dark:border-gray-700 flex">
-      <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4 pt-1">
+      <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4">
         <span
           class="
             date--content
