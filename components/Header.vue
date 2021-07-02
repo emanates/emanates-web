@@ -4,14 +4,26 @@
       class="
         header--content
         font-merriweather
-        w-3/4
+        md:w-3/4
+        w-11/12
         mr-auto
         ml-auto
         text-center
-        py-24
+        md:py-24
+        py-16
       "
     >
-      <h1 class="text-7xl leading-relaxed font-black dark:text-white">
+      <h1
+        class="
+          xl:text-7xl
+          md:text-6xl
+          text-4xl
+          md:leading-relaxed
+          leading-normal
+          font-black
+          dark:text-white
+        "
+      >
         Writing is an Art. <br />
         I am an Artist.
       </h1>
