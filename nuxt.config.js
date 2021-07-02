@@ -17,6 +17,7 @@ export default {
   css: [
     '~/assets/scss/app.scss',
     '~/assets/css/fonts/inter.css',
+    '~/assets/css/fonts/merriweather.css'
   ],
 
   plugins: [
