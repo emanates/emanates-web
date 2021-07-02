@@ -4,7 +4,7 @@
     <div
       class="
         wrapper
-        2xl:w-1/3
+        2xl:w-1/2
         xl:w-3/4
         lg:w-3/5
         md:w-4/5
