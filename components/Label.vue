@@ -1,7 +1,16 @@
 <template>
   <div class="label__container">
     <div
-      class="label py-1 px-5 font-semibold inline-flex rounded-2xl uppercase"
+      class="
+        label
+        py-1
+        px-5
+        font-semibold
+        text-sm
+        inline-flex
+        rounded-2xl
+        uppercase
+      "
       :class="getColorClassForLabel(label.color)"
     >
       {{ label.name }}

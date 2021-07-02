@@ -3,7 +3,8 @@ export const labels = {
         return {
             colorMap: {
                 "0075ca": "bg-green-200",
-                "1089DD": "bg-blue-200"
+                "1089DD": "bg-blue-200",
+                "FE7584": "bg-red-200"
             }
         }
     },
