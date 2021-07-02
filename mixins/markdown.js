@@ -1,13 +1,6 @@
 import { snarkdown } from "snarkdown";
 
 export const markdownRenderer = {
-    name: "StaticContent",
-    props: {
-        path: {
-            type: String,
-            require: true,
-        },
-    },
     data: () => {
         return {
             content: "",
@@ -32,13 +25,19 @@ export const markdownRenderer = {
                 )
                 .join("\n");
         },
-        readContent() {
+        render(markdown) {
+            /**
+             * Render method to render the markdown content to HTML.
+             */
+            return this.enhancedSnarkdown(markdown);
+        },
+        readContent(filePath) {
             /**
              * Read the content of the passed file based on
              * the path and accordingly store it in a local
              * variable.
              */
-            fetch(this.getFilePath)
+            fetch(filePath)
                 .then((response) => {
                     return response.text();
                 })
@@ -51,11 +50,5 @@ export const markdownRenderer = {
         getContent() {
             return this.content;
         },
-        getFilePath() {
-            return this.path;
-        },
-    },
-    mounted() {
-        this.readContent();
     },
 };
