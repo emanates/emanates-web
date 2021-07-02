@@ -6,7 +6,7 @@
         wrapper
         2xl:w-1/2
         xl:w-3/4
-        lg:w-3/5
+        lg:w-3/4
         md:w-4/5
         w-11/12
         mr-auto
