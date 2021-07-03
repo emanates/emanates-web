@@ -34,6 +34,9 @@
             >{{ post.user.login }}</a
           >
         </p>
+        <p class="description mt-3">
+          {{ findPostDescription(post.body) }}
+        </p>
         <Label v-if="post.labels.length" :label="post.labels[0]" class="mt-6" />
       </div>
     </div>
@@ -62,6 +65,32 @@ export default {
       return new Date(date).toLocaleDateString('en-US', {
         dateStyle: 'medium',
       })
+    },
+    extractPostDescription(comment) {
+      /**
+       * Extract the post description from the comment syntax
+       * of markdown. This method is to be called if the comment
+       * is found.
+       */
+      const re = /\(.*?\)/
+
+      // Find just the text first
+      const match = comment.match(re)
+
+      // Now remove the braces
+      return match[0].replace(/\(|\)/g, '')
+    },
+    findPostDescription(markdownContent) {
+      /**
+       * Extract the description of the post from the content.
+       *
+       * The description will be the first line in the markdown content that starts
+       * with [//].
+       */
+      const re = /\[\/\/\].*?#.*?\(.*?\)/
+      const matches = markdownContent.match(re)
+
+      return matches ? this.extractPostDescription(matches[0]) : null
     },
   },
 }
