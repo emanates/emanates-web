@@ -6,7 +6,6 @@
 
 <script>
 import { markdownRenderer } from '~/mixins/markdown'
-import 'prismjs/themes/prism.css'
 
 export default {
   mixins: [markdownRenderer],
