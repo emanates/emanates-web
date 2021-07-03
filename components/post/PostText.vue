@@ -42,19 +42,19 @@ export default {
       }
 
       h1 {
-        @apply text-4xl;
+        @apply text-5xl;
       }
 
       h2 {
-        @apply text-3xl;
+        @apply text-4xl;
       }
 
       h3 {
-        @apply text-2xl;
+        @apply text-3xl;
       }
 
       h4 {
-        @apply text-xl;
+        @apply text-2xl;
       }
     }
   }
