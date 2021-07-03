@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Prism from 'prismjs'
 import { markdownRenderer } from '~/mixins/markdown'
 
 export default {
@@ -20,6 +21,10 @@ export default {
     getPostText() {
       return this.renderWithHighlight(this.post.body)
     },
+  },
+  mounted() {
+    // Run highlight again so the pre tags get the class
+    Prism.highlightAll()
   },
 }
 </script>
