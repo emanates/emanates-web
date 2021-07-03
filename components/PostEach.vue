@@ -95,3 +95,22 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.post--each__container {
+  .post--each--content {
+    .right--content {
+      .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        @media only screen and (max-width: 768px) {
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
+  }
+}
+</style>
