@@ -10,7 +10,7 @@
         ml-auto
         text-center
         md:py-24
-        py-16
+        py-12
       "
     >
       <h1
@@ -25,9 +25,19 @@
           dark:text-white
         "
       >
-        Writing is an Art. <br />
-        I am an Artist.
+        Writing is an <b>Art</b>. <br />
+        I am an <b>Artist</b>.
       </h1>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.header__container {
+  .header--content {
+    b {
+      @apply text-green-400;
+    }
+  }
+}
+</style>
