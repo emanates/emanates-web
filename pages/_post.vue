@@ -28,13 +28,13 @@ export default {
       body: JSON.stringify({
         query: qlQuery,
       }),
-    })
+    }).then((response) => response.json())
 
     // Check if error was thrown
-    console.log(response.status)
+    // The node value will be null if the nodeId is invalid
+    if (response.data.node == null) return console.log('404 error')
 
-    const json = await response.json()
-    return { post: json.data.node }
+    return { post: response.data.node }
   },
 }
 </script>
