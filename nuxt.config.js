@@ -44,6 +44,9 @@ export default {
   },
 
   build: {
+    babel: {
+      babelrc: true
+    }
   },
 
   // Change port
