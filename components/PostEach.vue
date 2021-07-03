@@ -21,9 +21,12 @@
         >
       </div>
       <div class="right--content 2xl:w-4/5 xl:w-5/6 md:w-3/4 md:mt-0 mt-3">
-        <h1 class="md:text-3xl text-2xl font-semibold dark:text-gray-200">
+        <router-link
+          :to="getSlug"
+          class="md:text-3xl text-2xl font-semibold dark:text-gray-200"
+        >
           {{ post.title }}
-        </h1>
+        </router-link>
         <p class="author--name md:mt-3 mt-1">
           <span class="text-gray-400 dark:text-gray-600">by</span>
           <a
