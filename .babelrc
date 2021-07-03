@@ -23,7 +23,19 @@
           "markup",
           "yml",
           "python",
-          "shell"
+          "shell",
+          "cpp",
+          "cs",
+          "c",
+          "docker",
+          "dart",
+          "git",
+          "plsql",
+          "json",
+          "scss",
+          "sql",
+          "ts",
+          "xml"
         ]
       }
     ]
