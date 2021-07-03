@@ -21,7 +21,9 @@
           "javascript",
           "css",
           "markup",
-          "yml"
+          "yml",
+          "python",
+          "shell"
         ]
       }
     ]

@@ -19,8 +19,9 @@ export const markdownRenderer = {
              * Render the markdown with highglight support.
              */
             return marked(markdown, {
-                highlight: (code, lang) => {
-                    return Prism.highlight(code, Prism.languages[lang || 'markup'])
+                highlight: (code, language) => {
+                    const lang = Object.keys(Prism.languages).includes(language) ? language : "markup";
+                    return Prism.highlight(code, Prism.languages[lang])
                 }
             })
         },
