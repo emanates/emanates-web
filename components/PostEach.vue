@@ -24,7 +24,7 @@
         <h1 class="md:text-3xl text-2xl font-semibold dark:text-gray-200">
           {{ post.title }}
         </h1>
-        <p class="author--name mt-3">
+        <p class="author--name md:mt-3 mt-1">
           <span class="text-gray-400 dark:text-gray-600">by</span>
           <a
             rel="noreferrer noopener"
@@ -34,10 +34,14 @@
             >{{ post.user.login }}</a
           >
         </p>
-        <p class="description mt-3">
+        <p class="description mt-6 text-gray-600 font-medium">
           {{ findPostDescription(post.body) }}
         </p>
-        <Label v-if="post.labels.length" :label="post.labels[0]" class="mt-6" />
+        <Label
+          v-if="post.labels.length"
+          :label="post.labels[0]"
+          class="mt-6 hidden"
+        />
       </div>
     </div>
   </div>
