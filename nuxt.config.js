@@ -17,7 +17,8 @@ export default {
   css: [
     '~/assets/scss/app.scss',
     '~/assets/css/fonts/inter.css',
-    '~/assets/css/fonts/merriweather.css'
+    '~/assets/css/fonts/merriweather.css',
+    '~/assets/css/themes/night-owl.css'
   ],
 
   plugins: [
@@ -43,6 +44,9 @@ export default {
   },
 
   build: {
+    babel: {
+      babelrc: true
+    }
   },
 
   // Change port

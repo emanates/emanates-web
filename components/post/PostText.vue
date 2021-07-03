@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     getPostText() {
-      return this.render(this.post.body)
+      return this.renderWithHighlight(this.post.body)
     },
   },
 }
@@ -79,6 +79,10 @@ export default {
         p {
           margin: 0;
         }
+      }
+
+      pre {
+        @apply my-12 rounded-md;
       }
     }
   }
