@@ -70,6 +70,16 @@ export default {
           @apply underline;
         }
       }
+
+      blockquote {
+        @apply border-l-8 border-yellow-300 bg-yellow-100;
+
+        padding: 20px 15px;
+
+        p {
+          margin: 0;
+        }
+      }
     }
   }
 }
