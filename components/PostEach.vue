@@ -9,7 +9,7 @@
         flex flex-wrap
       "
     >
-      <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4">
+      <div class="left--content 2xl:w-1/5 xl:w-1/6 md:w-1/4 w-full">
         <span
           class="
             date--content
