@@ -21,7 +21,7 @@ export default {
     const qlQuery = `query { node(id: "${nodeId}") {
       ... on Issue {
         title
-        author {login, url}
+        author {login, url, avatarUrl}
         body
         createdAt
         updatedAt
