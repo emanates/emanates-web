@@ -33,7 +33,7 @@ export default {
       @apply text-lg;
 
       p {
-        @apply my-8;
+        @apply my-8 leading-relaxed;
 
         code {
           @apply bg-blue-100 text-blue-600 rounded-md;
