@@ -28,6 +28,8 @@ export default {
 .post--text__container {
   .post--text {
     ::v-deep {
+      @apply text-lg;
+
       p {
         @apply my-6;
       }
