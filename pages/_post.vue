@@ -21,6 +21,18 @@ export default {
     const qlQuery = `query { node(id: "${nodeId}") {
       ... on Issue {
         title
+        author {login, url}
+        body
+        createdAt
+        updatedAt
+        labels (first: 1) {
+          edges {
+            node {
+              name
+              color
+            }
+          }
+        }
       }
     } }`
     const response = await fetch('https://api.github.com/graphql', {
