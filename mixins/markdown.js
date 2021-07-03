@@ -1,4 +1,5 @@
 import marked from "marked";
+import Prism from "prismjs";
 
 export const markdownRenderer = {
     data: () => {
@@ -12,6 +13,16 @@ export const markdownRenderer = {
              * Render method to render the markdown content to HTML.
              */
             return marked(markdown);
+        },
+        renderWithHighlight(markdown) {
+            /**
+             * Render the markdown with highglight support.
+             */
+            return marked(markdown, {
+                highlight: (code, lang) => {
+                    return Prism.highlight(code, Prism.languages[lang || 'markup'])
+                }
+            })
         },
         readContent(filePath) {
             /**

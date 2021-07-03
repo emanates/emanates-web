@@ -6,6 +6,7 @@
 
 <script>
 import { markdownRenderer } from '~/mixins/markdown'
+import 'prismjs/themes/prism.css'
 
 export default {
   mixins: [markdownRenderer],
@@ -18,7 +19,7 @@ export default {
   },
   computed: {
     getPostText() {
-      return this.render(this.post.body)
+      return this.renderWithHighlight(this.post.body)
     },
   },
 }
