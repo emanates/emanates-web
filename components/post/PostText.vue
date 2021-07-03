@@ -64,7 +64,11 @@ export default {
       }
 
       a {
-        @apply text-blue-500 underline;
+        @apply text-blue-500 font-semibold;
+
+        &:hover {
+          @apply underline;
+        }
       }
     }
   }
