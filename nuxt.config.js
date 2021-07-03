@@ -18,6 +18,7 @@ export default {
     '~/assets/scss/app.scss',
     '~/assets/css/fonts/inter.css',
     '~/assets/css/fonts/merriweather.css',
+    '~/assets/css/fonts/jetbrains-mono.css',
     '~/assets/css/themes/night-owl.css'
   ],
 
