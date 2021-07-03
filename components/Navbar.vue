@@ -13,7 +13,13 @@
       <div class="navbar--content w-3/4 mr-auto ml-auto">
         <div class="brand">
           <h1 class="font-bold text-lg dark:text-white">Blog</h1>
-          <p class="text-sm text-gray-500">Powered by Emanates</p>
+          <a
+            href="https://github.com/emanates/emanates-web"
+            rel="noopener noreferer"
+            target="_blank"
+            class="text-sm text-gray-500"
+            >Powered by Emanates</a
+          >
         </div>
       </div>
     </div>
