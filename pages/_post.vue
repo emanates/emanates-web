@@ -5,16 +5,14 @@
 <script>
 export default {
   asyncData({ params }) {
-    // Try to extract the issue ID
+    // Try to extract the issue nodeId
     const slug = params.post
-    const id = slug.split('-').slice(-1)[0]
+    const nodeId = slug.split('-').slice(-1)[0]
 
-    // The id would be undefined, if slug is invalid
+    // The nodeId would be undefined, if slug is invalid
     // raise error on that.
     /* eslint-disable no-console */
-    if (!id) return console.log('Error with slug')
-
-    // Now fetch the post with the id
+    if (!nodeId) return console.log('Error with slug')
   },
 }
 </script>
