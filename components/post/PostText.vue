@@ -62,6 +62,10 @@ export default {
       h4 {
         @apply text-2xl;
       }
+
+      a {
+        @apply text-blue-500 underline;
+      }
     }
   }
 }
