@@ -5,5 +5,6 @@ module.exports = {
   ],
   rules: {
     "at-rule-no-unknown": false,
+    "selector-pseudo-element-no-unknown": false
   },
 }

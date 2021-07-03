@@ -23,3 +23,15 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.post--text__container {
+  .post--text {
+    ::v-deep {
+      p {
+        @apply my-6;
+      }
+    }
+  }
+}
+</style>
