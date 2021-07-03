@@ -1,10 +1,10 @@
 <template>
   <div class="post--header__container py-12 text-lg">
     <Label :label="post.labels.edges[0].node" />
-    <h1 class="text-7xl py-8 font-bold leading-normal">
+    <h1 class="text-7xl py-8 font-bold leading-normal dark:text-gray-100">
       {{ post.title }}
     </h1>
-    <div class="date flex font-medium">
+    <div class="date flex font-medium dark:text-gray-300">
       <p class="created--at">
         {{
           new Date(post.createdAt).toLocaleDateString('en-US', {
@@ -17,7 +17,7 @@
         <span class="text-gray-500">Updated</span> {{ getRelativeUpdatedAt }}
       </p>
     </div>
-    <div class="author flex items-center mt-8">
+    <div class="author flex items-center mt-8 dark:text-gray-300">
       <div class="avatar">
         <img
           :src="post.author.avatarUrl"
@@ -32,7 +32,12 @@
           :href="post.author.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-lg text-gray-800 hover:underline font-semibold"
+          class="
+            text-lg text-gray-800
+            dark:text-gray-300
+            hover:underline
+            font-semibold
+          "
         >
           {{ post.author.login }}
         </a>
