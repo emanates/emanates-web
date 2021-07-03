@@ -4,7 +4,7 @@ module.exports = {
             colors: {},
         },
     },
-    darkMode: 'media',
+    darkMode: 'class',
     variants: {
         extend: {
             opacity: ['disabled']

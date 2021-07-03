@@ -32,7 +32,9 @@ export default {
     ::v-deep {
       @apply text-lg;
 
-      p {
+      p,
+      ol,
+      ul {
         @apply my-8 leading-relaxed;
 
         code {
@@ -41,6 +43,16 @@ export default {
           @extend .font-inter;
 
           padding: 2px 5px;
+        }
+      }
+
+      ol,
+      ul {
+        list-style-position: outside;
+        list-style-type: decimal;
+        margin-left: 20px;
+        li {
+          @apply my-3;
         }
       }
 
