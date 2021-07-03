@@ -37,11 +37,7 @@
         <p class="description mt-6 text-gray-600 font-medium">
           {{ findPostDescription(post.body) }}
         </p>
-        <Label
-          v-if="post.labels.length"
-          :label="post.labels[0]"
-          class="mt-6 hidden"
-        />
+        <Label v-if="post.labels.length" :label="post.labels[0]" class="mt-6" />
       </div>
     </div>
   </div>
