@@ -44,17 +44,23 @@
 </template>
 
 <script>
+import { post } from '@/mixins/post'
 import Label from './Label.vue'
 
 export default {
   name: 'PostEach',
   components: { Label },
-  mixins: [],
+  mixins: [post],
   props: {
     post: {
       type: Object,
       require: true,
       default: null,
+    },
+  },
+  computed: {
+    getSlug() {
+      return this.buildSlug(this.post)
     },
   },
   methods: {
