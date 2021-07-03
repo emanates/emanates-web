@@ -1,6 +1,20 @@
 <template>
   <div class="post--header__container py-12">
     <Label :label="post.labels.edges[0].node" />
+    <h1 class="text-7xl py-8 font-bold">
+      {{ post.title }}
+    </h1>
+    <div class="date flex text-lg font-medium">
+      <p class="created--at">
+        {{
+          new Date(post.createdAt).toLocaleDateString('en-US', {
+            dateStyle: 'medium',
+          })
+        }}
+      </p>
+      <div class="separator mx-2">&bull;</div>
+      <p><span class="text-gray-500">Updated</span> {{ post.updatedAt }}</p>
+    </div>
   </div>
 </template>
 
