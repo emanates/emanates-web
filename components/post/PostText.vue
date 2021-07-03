@@ -32,6 +32,12 @@ export default {
 
       p {
         @apply my-8;
+
+        code {
+          @apply bg-blue-100 text-blue-600 rounded-md;
+
+          padding: 2px 5px;
+        }
       }
 
       h1,

@@ -8,6 +8,11 @@ module.exports = {
       true,
       { "ignoreAtRules": ["apply", "extend"] }
     ],
-    "selector-pseudo-element-no-unknown": ["v-deep"]
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        ignorePseduoElements: ["v-deep"]
+      }
+    ]
   },
 }
