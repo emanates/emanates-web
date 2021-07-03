@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/fonts';
+
 .post--text__container {
   .post--text {
     ::v-deep {
@@ -35,6 +37,8 @@ export default {
 
         code {
           @apply bg-blue-100 text-blue-600 rounded-md;
+
+          @extend .font-inter;
 
           padding: 2px 5px;
         }
