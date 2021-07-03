@@ -1,9 +1,13 @@
 <template>
-  <div class="post"></div>
+  <div class="post">
+    <post-content :post="post" />
+  </div>
 </template>
 
 <script>
+import PostContent from '~/components/PostContent.vue'
 export default {
+  components: { PostContent },
   async asyncData({ params }) {
     // Try to extract the issue nodeId
     const slug = params.post
