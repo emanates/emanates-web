@@ -17,7 +17,7 @@
             href="https://github.com/emanates/emanates-web"
             rel="noopener noreferer"
             target="_blank"
-            class="text-sm text-gray-500"
+            class="text-sm text-gray-500 font-medium"
             >Powered by <span class="text-green-500">Emanates</span></a
           >
         </div>
