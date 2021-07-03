@@ -1,5 +1,5 @@
 <template>
-  <div class="posts__container">
+  <div class="posts__container my-20">
     <post-each v-for="(value, id) in posts" :key="id" :post="value" />
   </div>
 </template>
