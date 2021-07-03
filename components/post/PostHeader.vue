@@ -13,13 +13,17 @@
         }}
       </p>
       <div class="separator mx-2">&bull;</div>
-      <p><span class="text-gray-500">Updated</span> {{ post.updatedAt }}</p>
+      <p>
+        <span class="text-gray-500">Updated</span> {{ getRelativeUpdatedAt }}
+      </p>
     </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 import Label from '../Label.vue'
+
 export default {
   components: { Label },
   props: {
@@ -27,6 +31,11 @@ export default {
       type: Object,
       require: true,
       default: null,
+    },
+  },
+  computed: {
+    getRelativeUpdatedAt() {
+      return moment(this.post.updatedAt).fromNow()
     },
   },
 }
