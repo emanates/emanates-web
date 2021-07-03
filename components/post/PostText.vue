@@ -80,6 +80,10 @@ export default {
           margin: 0;
         }
       }
+
+      pre {
+        @apply my-12 rounded-md;
+      }
     }
   }
 }
