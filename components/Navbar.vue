@@ -56,7 +56,7 @@ export default {
           @apply text-green-400;
         }
 
-        &.nuxt-link-active {
+        &.nuxt-link-exact-active {
           @apply text-green-400;
         }
       }
