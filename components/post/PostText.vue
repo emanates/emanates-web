@@ -1,5 +1,5 @@
 <template>
-  <div class="post--text__container">
+  <div class="post--text__container pb-6 mb-12">
     <div class="post--text" v-html="getPostText"></div>
   </div>
 </template>
