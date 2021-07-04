@@ -22,7 +22,11 @@
       >
         <p class="text">We're Open Source</p>
         <img
-          src="@/assets/img/github-dark.png"
+          :src="
+            require(`@/assets/img/github-${
+              isDeviceDarkTheme ? 'light' : 'dark'
+            }.png`)
+          "
           class="ml-3"
           width="20"
           alt="GitHub Logo"
@@ -31,3 +35,11 @@
     </div>
   </div>
 </template>
+
+<script>
+import { theme } from '@/mixins/theme'
+
+export default {
+  mixins: [theme],
+}
+</script>
