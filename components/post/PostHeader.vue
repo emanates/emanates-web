@@ -1,7 +1,17 @@
 <template>
   <div class="post--header__container py-12 text-lg">
     <Label :label="post.labels.edges[0].node" />
-    <h1 class="text-7xl py-8 font-bold leading-normal dark:text-gray-100">
+    <h1
+      class="
+        2xl:text-7xl
+        text-6xl
+        py-8
+        font-bold
+        2xl:leading-normal
+        leading-snug
+        dark:text-gray-100
+      "
+    >
       {{ post.title }}
     </h1>
     <div class="date flex font-medium dark:text-gray-300">
