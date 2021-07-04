@@ -44,7 +44,7 @@ export default {
         @apply my-8 leading-relaxed;
 
         > code {
-          @apply bg-blue-100 text-blue-600 rounded-md;
+          @apply bg-blue-100 dark:bg-blue-300 text-blue-600 dark:text-blue-700 rounded-md;
 
           @extend .font-inter;
 
@@ -86,7 +86,7 @@ export default {
       }
 
       a {
-        @apply text-blue-500 font-semibold;
+        @apply text-blue-500 dark:text-blue-400 font-semibold;
 
         &:hover {
           @apply underline;
