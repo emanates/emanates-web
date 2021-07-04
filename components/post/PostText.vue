@@ -139,6 +139,10 @@ export default {
           }
         }
       }
+
+      img {
+        @apply rounded-md;
+      }
     }
   }
 }
