@@ -45,9 +45,11 @@
             "
           ></div>
           <div class="theme mt-2">
-            <client-only>
-              <unicon name="brightness" fill="white" />
-            </client-only>
+            <button class="">
+              <client-only>
+                <unicon name="brightness" fill="white" hover-fill="#34D399" />
+              </client-only>
+            </button>
           </div>
         </div>
       </div>
