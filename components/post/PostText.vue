@@ -58,7 +58,7 @@ export default {
         list-style-type: decimal;
         margin-left: 20px;
         li {
-          @apply my-3;
+          @apply my-1;
         }
       }
 
