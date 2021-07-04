@@ -23,6 +23,7 @@ export default {
   ],
 
   plugins: [
+    { src: '~/plugins/unicons', mode: 'client' }
   ],
 
   components: true,
