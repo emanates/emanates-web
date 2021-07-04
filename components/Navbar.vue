@@ -45,7 +45,7 @@
             "
           ></div>
           <div class="theme mt-2">
-            <button class="">
+            <button title="Change Theme" aria-label="Change Theme">
               <client-only>
                 <unicon name="brightness" fill="white" hover-fill="#34D399" />
               </client-only>
