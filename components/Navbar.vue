@@ -46,7 +46,7 @@
           ></div>
           <div class="theme mt-2">
             <client-only>
-              <unicon name="brightness" fill="royalblue" />
+              <unicon name="brightness" fill="white" />
             </client-only>
           </div>
         </div>
