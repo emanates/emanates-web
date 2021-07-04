@@ -39,10 +39,11 @@ export default {
 
       p,
       ol,
-      ul {
+      ul,
+      table {
         @apply my-8 leading-relaxed;
 
-        code {
+        > code {
           @apply bg-blue-100 text-blue-600 rounded-md;
 
           @extend .font-inter;
@@ -104,6 +105,39 @@ export default {
 
       pre {
         @apply my-12 rounded-md;
+      }
+
+      table {
+        @apply table-auto text-left;
+
+        thead {
+          tr {
+            th {
+              @apply px-2 text-center text-green-500;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            @apply border-green-300;
+
+            td {
+              @apply px-2 py-2 border border-green-300;
+            }
+
+            &:nth-child(even) {
+              @apply bg-green-50;
+            }
+
+            &:last-child {
+              @apply border-b;
+            }
+            &:first-child {
+              @apply border-t;
+            }
+          }
+        }
       }
     }
   }
