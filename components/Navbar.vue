@@ -3,11 +3,11 @@
     <div
       class="
         bg-white
-        dark:bg-gray-900
+        dark:bg-black
         py-2
         w-full
         border-b border-gray-300
-        dark:border-gray-700
+        dark:border-darklow
       "
     >
       <div class="navbar--content w-3/4 mr-auto ml-auto">

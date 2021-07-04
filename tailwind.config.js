@@ -1,7 +1,11 @@
 module.exports = {
     theme: {
         extend: {
-            colors: {},
+            colors: {
+                darklow: {
+                    DEFAULT: "#181818"
+                }
+            },
         },
     },
     darkMode: 'media',
