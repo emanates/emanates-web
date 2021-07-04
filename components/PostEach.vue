@@ -43,7 +43,9 @@
             >{{ post.user.login }}</a
           >
         </p>
-        <p class="description mt-6 text-gray-600 font-medium">
+        <p
+          class="description mt-6 text-gray-600 dark:text-gray-400 font-medium"
+        >
           {{ findPostDescription(post.body) }}
         </p>
         <Label v-if="post.labels.length" :label="post.labels[0]" class="mt-6" />
