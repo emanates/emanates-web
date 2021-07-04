@@ -33,7 +33,7 @@
           >
         </div>
         <div class="right--content">
-          <router-link to="/" class="text-lg">Posts</router-link>
+          <router-link to="/" class="text-lg link">Posts</router-link>
         </div>
       </div>
     </div>
@@ -45,3 +45,22 @@ export default {
   name: 'Navbar',
 }
 </script>
+
+<style lang="scss" scoped>
+.navbar {
+  .navbar--content {
+    .right--content {
+      .link {
+        transition: 0.2s ease;
+        &:hover {
+          @apply text-green-400;
+        }
+
+        &.nuxt-link-active {
+          @apply text-green-400;
+        }
+      }
+    }
+  }
+}
+</style>
