@@ -2,4 +2,6 @@
 
 body {
     @extend .font-inter;
+
+    @apply dark:bg-darklow;
 }
