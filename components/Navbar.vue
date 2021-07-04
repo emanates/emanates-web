@@ -32,19 +32,28 @@
             >Powered by <span class="text-green-500">Emanates</span></a
           >
         </div>
-        <div class="right--content">
+        <div class="right--content flex items-center">
           <router-link to="/" class="text-lg link">Posts</router-link>
+          <div
+            class="
+              separator
+              border-l
+              py-4
+              border-gray-300
+              dark:border-gray-600
+              mx-6
+            "
+          ></div>
+          <div class="theme mt-2">
+            <client-only>
+              <unicon name="brightness" fill="royalblue" />
+            </client-only>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Navbar',
-}
-</script>
 
 <style lang="scss" scoped>
 .navbar {
