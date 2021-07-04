@@ -35,7 +35,7 @@ export default {
 .post--text__container {
   .post--text {
     ::v-deep {
-      @apply text-lg;
+      @apply text-lg dark:text-gray-200;
 
       p,
       ol,
@@ -94,7 +94,7 @@ export default {
       }
 
       blockquote {
-        @apply border-l-8 border-yellow-300 bg-yellow-100;
+        @apply border-l-8 border-yellow-300 bg-yellow-100 dark:border-yellow-400 dark:bg-yellow-200 dark:text-gray-800;
 
         padding: 20px 15px;
 
