@@ -3,12 +3,12 @@
     <div
       class="
         bg-white
-        dark:bg-black
+        dark:bg-darklow
         dark:text-white
         py-2
         w-full
         border-b border-gray-300
-        dark:border-darklow
+        dark:border-gray-700
       "
     >
       <div
