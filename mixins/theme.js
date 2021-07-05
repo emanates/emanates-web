@@ -110,7 +110,9 @@ export const theme = {
              */
             if (!this.isClientSide()) return "";
 
-            return document.body.classList.contains("dark");
+            if (this.currentTheme !== "auto") return this.currentTheme === "dark";
+
+            return this.isDeviceDarkTheme();
         }
     }
 }
