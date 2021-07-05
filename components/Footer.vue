@@ -21,16 +21,18 @@
         rel="noopener noreferrer"
       >
         <p class="text">We're Open Source</p>
-        <img
-          :src="
-            require(`@/assets/img/github-${
-              isDeviceDarkTheme() ? 'light' : 'dark'
-            }.png`)
-          "
-          class="ml-3"
-          width="20"
-          alt="GitHub Logo"
-        />
+        <client-only>
+          <img
+            :src="
+              require(`@/assets/img/github-${
+                isDeviceDarkTheme() ? 'light' : 'dark'
+              }.png`)
+            "
+            class="ml-3"
+            width="20"
+            alt="GitHub Logo"
+          />
+        </client-only>
       </a>
     </div>
   </div>
