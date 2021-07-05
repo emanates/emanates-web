@@ -2,6 +2,7 @@ export const theme = {
     data() {
         return {
             themeKey: "preferred-theme",
+            currentTheme: "auto",
             validValues: ["light", "dark", "auto"]
         }
     },
@@ -82,6 +83,9 @@ export const theme = {
                     bodyClassList.remove("dark");
                     break
             }
+
+            // Finally change the value of currentTheme
+            this.currentTheme = preferrance;
         },
     }
 }
