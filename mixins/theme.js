@@ -87,5 +87,15 @@ export const theme = {
             // Finally change the value of currentTheme
             this.currentTheme = preferrance;
         },
+        restoreTheme() {
+            /**
+             * Method ideally to be called on mount that will automatically
+             * determine the users preferrance and set the theme accordingly.
+             * 
+             * It will try to get the theme from the localStorage and then set
+             * it.
+             */
+            this.changeDeviceTheme(this.getTheme());
+        },
     }
 }

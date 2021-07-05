@@ -53,6 +53,9 @@ export default {
       showThemeMenu: false,
     }
   },
+  mounted() {
+    this.restoreTheme()
+  },
 }
 </script>
 
