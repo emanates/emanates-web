@@ -46,7 +46,7 @@
               mx-6
             "
           ></div>
-          <div class="theme mt-2">
+          <div class="theme mt-2 relative">
             <button title="Change Theme" aria-label="Change Theme">
               <client-only>
                 <unicon
@@ -56,6 +56,26 @@
                 />
               </client-only>
             </button>
+            <div
+              class="
+                theme--options
+                absolute
+                top-0
+                left-0
+                rounded-md
+                border
+                shadow-lg
+                bg-white
+                p-3
+                text-gray-600
+              "
+            >
+              <div class="options">
+                <button>Dark</button>
+                <button>Light</button>
+                <button>Auto</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,6 +108,16 @@ export default {
             @apply text-green-400;
           }
         }
+      }
+    }
+  }
+
+  .theme--options {
+    .options {
+      button {
+        display: block;
+
+        @apply p-1 hover:text-green-500 transition ease-in duration-100 font-medium;
       }
     }
   }
