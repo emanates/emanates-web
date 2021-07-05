@@ -46,7 +46,11 @@
               mx-6
             "
           ></div>
-          <div class="theme mt-2 relative">
+          <div
+            class="theme mt-2 relative"
+            @mouseover="showThemeMenu = true"
+            @mouseleave="showThemeMenu = false"
+          >
             <button title="Change Theme" aria-label="Change Theme">
               <client-only>
                 <unicon
@@ -56,26 +60,30 @@
                 />
               </client-only>
             </button>
-            <div
-              class="
-                theme--options
-                absolute
-                top-0
-                left-0
-                rounded-md
-                border
-                shadow-lg
-                bg-white
-                p-3
-                text-gray-600
-              "
-            >
-              <div class="options">
-                <button>Dark</button>
-                <button>Light</button>
-                <button>Auto</button>
+            <transition name="theme-show">
+              <div
+                v-if="showThemeMenu"
+                class="
+                  theme--options
+                  absolute
+                  top-0
+                  left-0
+                  rounded-md
+                  border
+                  shadow-lg
+                  bg-white
+                  py-2
+                  px-5
+                  text-gray-600
+                "
+              >
+                <div class="options">
+                  <button>Dark</button>
+                  <button>Light</button>
+                  <button>Auto</button>
+                </div>
               </div>
-            </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -88,6 +96,11 @@ import { theme } from '~/mixins/theme'
 
 export default {
   mixins: [theme],
+  data() {
+    return {
+      showThemeMenu: false,
+    }
+  },
 }
 </script>
 
@@ -120,6 +133,21 @@ export default {
         @apply p-1 hover:text-green-500 transition ease-in duration-100 font-medium;
       }
     }
+  }
+
+  .theme-show-enter,
+  .theme-show-leave-to {
+    transform: scale(0.5);
+    transform-origin: left center;
+  }
+
+  .theme-show-enter-to,
+  .theme-show-leave {
+    transform: scale(1);
+  }
+
+  .theme-show-enter-active {
+    transition: transform 70ms;
   }
 }
 </style>
