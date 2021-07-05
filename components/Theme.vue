@@ -38,18 +38,24 @@
           <div class="options">
             <button
               :class="currentTheme == 'light' ? 'active' : ''"
+              title="Enable light theme"
+              aria-label="Enable light theme"
               @click="setThemeWrapper('light')"
             >
               Light
             </button>
             <button
               :class="currentTheme == 'dark' ? 'active' : ''"
+              title="Enable dark theme"
+              aria-label="Enable dark theme"
               @click="setThemeWrapper('dark')"
             >
               Dark
             </button>
             <button
               :class="currentTheme == 'auto' ? 'active' : ''"
+              title="Sync theme with device"
+              aria-label="Sync theme with device"
               @click="setThemeWrapper('auto')"
             >
               Auto
@@ -77,7 +83,7 @@ export default {
     }
   },
   computed: {
-      getCurrentThemeIcon() {
+    getCurrentThemeIcon() {
       /**
        * Return the name of the icon based on the
        * current theme
@@ -95,8 +101,8 @@ export default {
 
       // Hide the menu
       this.showThemeMenu = false
-    }
-  }
+    },
+  },
 }
 </script>
 
