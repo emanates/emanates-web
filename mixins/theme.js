@@ -34,6 +34,9 @@ export const theme = {
 
             // Finally save the theme
             localStorage.setItem(this.themeKey, value)
+
+            // Now change the theme
+            this.changeDeviceTheme(value);
         },
         getTheme() {
             /**
@@ -48,24 +51,37 @@ export const theme = {
             if (!value) return "auto"
 
             // If the value is not valid, remove it from localStorage alltogether
-            if (!this.validValues.include(value)) localStorage.removeItem(this.themeKey);
+            if (!this.validValues.includes(value)) {
+                localStorage.removeItem(this.themeKey);
+                return "auto"
+            }
 
             // Finally, if everything is okay, return the value
             return value;
         },
-        changeDeviceTheme() {
+        changeDeviceTheme(preferrance) {
             /**
              * Change the theme of the device based on what the users preferrence was.
              * 
              * If no preferrance was give, we need to set it to auto.
              */
-            const preferrance = this.getTheme();
+            if (!this.validValues.includes(preferrance)) preferrance = "auto";
 
-            if (preferrance === "auto") {
-                // Determine the theme
-                this.getDeviceTheme();
+            if (preferrance === "auto") preferrance = this.getDeviceTheme();
+
+            // Finally set the theme
+            // At this point the value of preferrance should be one of `dark` or `light`
+            const bodyClassList = document.querySelector("body").classList;
+            const isDark = bodyClassList.includes("dark");
+
+            switch (true) {
+                case preferrance === "dark" && !isDark:
+                    bodyClassList.add("dark");
+                    break
+                case preferrance === "light" && isDark:
+                    bodyClassList.remove("dark");
+                    break
             }
-
         },
     }
 }
