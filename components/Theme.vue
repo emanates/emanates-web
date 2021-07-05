@@ -8,7 +8,7 @@
       <button title="Change Theme" aria-label="Change Theme">
         <client-only>
           <unicon
-            name="brightness"
+            :name="getCurrentThemeIcon"
             :fill="currentExactTheme == 'dark' ? 'white' : 'black'"
             hover-fill="#34D399"
           />
@@ -69,7 +69,21 @@ export default {
   data() {
     return {
       showThemeMenu: false,
+      themeNameToIconMap: {
+        light: 'brightness',
+        dark: 'moon',
+        auto: 'mountains-sun',
+      },
     }
+  },
+  computed: {
+      getCurrentThemeIcon() {
+      /**
+       * Return the name of the icon based on the
+       * current theme
+       */
+      return this.themeNameToIconMap[this.currentTheme]
+    },
   },
   mounted() {
     this.restoreTheme()
@@ -81,8 +95,8 @@ export default {
 
       // Hide the menu
       this.showThemeMenu = false
-    },
-  },
+    }
+  }
 }
 </script>
 
