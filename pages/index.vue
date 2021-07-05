@@ -1,16 +1,14 @@
 <template>
   <div>
-    <Header />
     <posts-container :posts="posts" />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 import { posts } from '../mixins/posts'
 
 export default {
-  components: { Header },
+  components: {},
   mixins: [posts],
   async asyncData() {
     const token = process.env.EMANATES_TOKEN
