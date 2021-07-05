@@ -46,7 +46,7 @@
               mx-6
             "
           ></div>
-          <theme />
+          <Theme />
         </div>
       </div>
     </div>
