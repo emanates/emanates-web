@@ -1,4 +1,7 @@
+import { utils } from "@/mixins/utils";
+
 export const theme = {
+    mixins: [utils],
     data() {
         return {
             themeKey: "preferred-theme",
@@ -15,7 +18,8 @@ export const theme = {
              * NOTE: Don't try to do anything if the code is being run on
              * the server side.
              */
-            if (!process.client) return "";
+            if (!this.isClientSide()) return "";
+
             const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
             return darkThemeMq.matches ? "dark" : "light";
         },
@@ -97,5 +101,16 @@ export const theme = {
              */
             this.changeDeviceTheme(this.getTheme());
         },
+    },
+    computed: {
+        isCurrentThemeDark() {
+            /**
+             * Check if the current set theme is dark. We just need
+             * to check if the body has the `dark` class added to it.
+             */
+            if (!this.isClientSide()) return "";
+
+            return document.body.classList.contains("dark");
+        }
     }
 }

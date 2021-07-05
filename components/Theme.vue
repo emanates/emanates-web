@@ -9,7 +9,7 @@
         <client-only>
           <unicon
             name="brightness"
-            :fill="isDeviceDarkTheme() ? 'white' : 'black'"
+            :fill="isCurrentThemeDark ? 'white' : 'black'"
             hover-fill="#34D399"
           />
         </client-only>
