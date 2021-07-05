@@ -33,7 +33,9 @@
           >
         </div>
         <div class="right--content flex items-center">
-          <router-link to="/" class="text-lg link">Posts</router-link>
+          <div class="links--content">
+            <router-link to="/" class="link">Posts</router-link>
+          </div>
           <div
             class="
               separator
@@ -73,14 +75,18 @@ export default {
 .navbar {
   .navbar--content {
     .right--content {
-      .link {
-        transition: 0.2s ease;
-        &:hover {
-          @apply text-green-400;
-        }
+      .links--content {
+        .link {
+          @apply text-xl font-medium;
 
-        &.nuxt-link-exact-active {
-          @apply text-green-400;
+          transition: 0.2s ease;
+          &:hover {
+            @apply text-green-400;
+          }
+
+          &.nuxt-link-exact-active {
+            @apply text-green-400;
+          }
         }
       }
     }
