@@ -75,11 +75,12 @@
                   py-2
                   px-5
                   text-gray-600
+                  origin-top-left
                 "
               >
                 <div class="options">
-                  <button>Dark</button>
                   <button>Light</button>
+                  <button>Dark</button>
                   <button>Auto</button>
                 </div>
               </div>
