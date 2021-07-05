@@ -1,6 +1,7 @@
 export const theme = {
     data() {
         return {
+            themeKey: "preferred-theme",
             validValues: ["light", "dark", "auto"]
         }
     },
@@ -31,8 +32,40 @@ export const theme = {
              */
             if (!this.validValues.includes(value)) throw new Error(`Invalid value passed. Should be one of ${this.validValues.join(',')}`);
 
-            // Finally set the theme
-            localStorage.setItem("preferred-theme", value)
-        }
+            // Finally save the theme
+            localStorage.setItem(this.themeKey, value)
+        },
+        getTheme() {
+            /**
+             * Read the value of the preferred theme from the storage
+             * and return it accordingly.
+             * 
+             * If the value is not present, we will return "auto"
+             */
+            const value = localStorage.getItem(this.themeKey);
+
+            // Check if value is valid
+            if (!value) return "auto"
+
+            // If the value is not valid, remove it from localStorage alltogether
+            if (!this.validValues.include(value)) localStorage.removeItem(this.themeKey);
+
+            // Finally, if everything is okay, return the value
+            return value;
+        },
+        changeDeviceTheme() {
+            /**
+             * Change the theme of the device based on what the users preferrence was.
+             * 
+             * If no preferrance was give, we need to set it to auto.
+             */
+            const preferrance = this.getTheme();
+
+            if (preferrance === "auto") {
+                // Determine the theme
+                this.getDeviceTheme();
+            }
+
+        },
     }
 }
