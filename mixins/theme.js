@@ -105,15 +105,7 @@ export const theme = {
             this.changeDeviceTheme(this.getTheme());
         },
     },
-    computed: {
-        isCurrentThemeDark() {
-            /**
-             * Check if the current set theme is dark. We just need
-             * to check if the body has the `dark` class added to it.
-             */
-            if (!this.isClientSide()) return "";
-
-            return this.currentExactTheme === "dark";
-        }
+    mounted() {
+        this.restoreTheme();
     }
 }

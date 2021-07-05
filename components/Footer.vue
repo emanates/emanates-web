@@ -38,7 +38,7 @@
           <img
             :src="
               require(`@/assets/img/github-${
-                isCurrentThemeDark ? 'light' : 'dark'
+                currentExactTheme == 'light' ? 'dark' : 'light'
               }.png`)
             "
             class="ml-3"

@@ -9,7 +9,7 @@
         <client-only>
           <unicon
             name="brightness"
-            :fill="isCurrentThemeDark ? 'white' : 'black'"
+            :fill="currentExactTheme == 'dark' ? 'white' : 'black'"
             hover-fill="#34D399"
           />
         </client-only>
