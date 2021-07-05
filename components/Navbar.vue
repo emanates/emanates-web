@@ -39,7 +39,7 @@
               separator
               border-l
               py-4
-              border-gray-300
+              border-gray-700
               dark:border-gray-600
               mx-6
             "
