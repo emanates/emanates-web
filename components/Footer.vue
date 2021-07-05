@@ -1,6 +1,19 @@
 <template>
   <div class="footer__container border-t dark:border-gray-700">
-    <div class="footer--content w-3/4 mr-auto ml-auto py-6 flex text-gray-500">
+    <div
+      class="
+        footer--content
+        md:w-3/4
+        w-11/12
+        mr-auto
+        ml-auto
+        py-6
+        flex
+        text-gray-500
+        md:justify-start
+        justify-center
+      "
+    >
       <div class="powered-by">
         Powered by
         <a
