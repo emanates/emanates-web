@@ -8,7 +8,7 @@ module.exports = {
             },
         },
     },
-    darkMode: 'media',
+    darkMode: 'class',
     variants: {
         extend: {
             opacity: ['disabled']

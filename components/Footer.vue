@@ -38,7 +38,7 @@
           <img
             :src="
               require(`@/assets/img/github-${
-                isDeviceDarkTheme() ? 'light' : 'dark'
+                currentExactTheme == 'light' ? 'dark' : 'light'
               }.png`)
             "
             class="ml-3"
