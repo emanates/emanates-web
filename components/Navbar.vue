@@ -46,7 +46,9 @@
               mx-6
             "
           ></div>
-          <Theme />
+          <div class="icons--content flex">
+            <Theme />
+          </div>
         </div>
       </div>
     </div>

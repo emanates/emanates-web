@@ -35,16 +35,14 @@
       >
         <p class="text">We're Open Source</p>
         <client-only>
-          <img
-            :src="
-              require(`@/assets/img/github-${
-                currentExactTheme == 'light' ? 'dark' : 'light'
-              }.png`)
-            "
-            class="ml-3"
-            width="20"
-            alt="GitHub Logo"
-          />
+          <client-only>
+            <unicon
+              name="github"
+              :fill="currentExactTheme == 'dark' ? 'white' : 'black'"
+              class="ml-3"
+              hover-fill="#34D399"
+            />
+          </client-only>
         </client-only>
       </a>
     </div>
