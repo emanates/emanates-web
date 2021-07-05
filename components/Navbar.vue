@@ -47,7 +47,11 @@
           <div class="theme mt-2">
             <button title="Change Theme" aria-label="Change Theme">
               <client-only>
-                <unicon name="brightness" fill="white" hover-fill="#34D399" />
+                <unicon
+                  name="brightness"
+                  :fill="isDeviceDarkTheme() ? 'white' : 'black'"
+                  hover-fill="#34D399"
+                />
               </client-only>
             </button>
           </div>
@@ -56,6 +60,14 @@
     </div>
   </div>
 </template>
+
+<script>
+import { theme } from '~/mixins/theme'
+
+export default {
+  mixins: [theme],
+}
+</script>
 
 <style lang="scss" scoped>
 .navbar {

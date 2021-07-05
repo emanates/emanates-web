@@ -24,7 +24,7 @@
         <img
           :src="
             require(`@/assets/img/github-${
-              isDeviceDarkTheme ? 'light' : 'dark'
+              isDeviceDarkTheme() ? 'light' : 'dark'
             }.png`)
           "
           class="ml-3"
