@@ -9,7 +9,9 @@
         <client-only>
           <unicon
             :name="getCurrentThemeIcon"
-            :fill="currentExactTheme == 'dark' ? 'white' : 'black'"
+            :fill="
+              $store.state.theme.currentExactTheme == 'dark' ? 'white' : 'black'
+            "
             hover-fill="#34D399"
           />
         </client-only>
@@ -37,7 +39,9 @@
         >
           <div class="options">
             <button
-              :class="currentTheme == 'light' ? 'active' : ''"
+              :class="
+                $store.state.theme.currentTheme == 'light' ? 'active' : ''
+              "
               title="Enable light theme"
               aria-label="Enable light theme"
               @click="setThemeWrapper('light')"
@@ -45,7 +49,7 @@
               Light
             </button>
             <button
-              :class="currentTheme == 'dark' ? 'active' : ''"
+              :class="$store.state.theme.currentTheme == 'dark' ? 'active' : ''"
               title="Enable dark theme"
               aria-label="Enable dark theme"
               @click="setThemeWrapper('dark')"
@@ -53,7 +57,7 @@
               Dark
             </button>
             <button
-              :class="currentTheme == 'auto' ? 'active' : ''"
+              :class="$store.state.theme.currentTheme == 'auto' ? 'active' : ''"
               title="Sync theme with device"
               aria-label="Sync theme with device"
               @click="setThemeWrapper('auto')"
@@ -88,7 +92,7 @@ export default {
        * Return the name of the icon based on the
        * current theme
        */
-      return this.themeNameToIconMap[this.currentTheme]
+      return this.themeNameToIconMap[this.$store.state.theme.currentTheme]
     },
   },
   mounted() {
