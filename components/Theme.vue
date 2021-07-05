@@ -24,11 +24,14 @@
             left-0
             rounded-md
             border
+            dark:border-gray-800
             shadow-lg
             bg-white
+            dark:bg-darklow
             py-2
             px-5
             text-gray-600
+            dark:text-gray-400
             origin-top-left
           "
         >
