@@ -33,13 +33,22 @@
           "
         >
           <div class="options">
-            <button :class="currentTheme == 'light' ? 'active' : ''">
+            <button
+              :class="currentTheme == 'light' ? 'active' : ''"
+              @click="setThemeWrapper('light')"
+            >
               Light
             </button>
-            <button :class="currentTheme == 'dark' ? 'active' : ''">
+            <button
+              :class="currentTheme == 'dark' ? 'active' : ''"
+              @click="setThemeWrapper('dark')"
+            >
               Dark
             </button>
-            <button :class="currentTheme == 'auto' ? 'active' : ''">
+            <button
+              :class="currentTheme == 'auto' ? 'active' : ''"
+              @click="setThemeWrapper('auto')"
+            >
               Auto
             </button>
           </div>
@@ -61,6 +70,15 @@ export default {
   },
   mounted() {
     this.restoreTheme()
+  },
+  methods: {
+    setThemeWrapper(value) {
+      // Set the theme
+      this.setTheme(value)
+
+      // Hide the menu
+      this.showThemeMenu = false
+    },
   },
 }
 </script>
