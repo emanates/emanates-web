@@ -38,7 +38,11 @@
           <client-only>
             <unicon
               name="github"
-              :fill="currentExactTheme == 'dark' ? 'white' : 'black'"
+              :fill="
+                $store.state.theme.currentExactTheme == 'dark'
+                  ? 'white'
+                  : 'black'
+              "
               class="ml-3"
               hover-fill="#34D399"
             />

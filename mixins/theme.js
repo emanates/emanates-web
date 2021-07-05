@@ -5,8 +5,6 @@ export const theme = {
     data() {
         return {
             themeKey: "preferred-theme",
-            currentTheme: "auto",
-            currentExactTheme: "light",
             validValues: ["light", "dark", "auto"]
         }
     },
@@ -74,7 +72,7 @@ export const theme = {
             if (!this.validValues.includes(preferrance)) preferrance = "auto";
 
             // Update the currentTheme value
-            this.currentTheme = preferrance;
+            this.$store.commit("theme/setCurrentTheme", preferrance);
 
             if (preferrance === "auto") preferrance = this.getDeviceTheme();
 
@@ -92,7 +90,7 @@ export const theme = {
                     break
             }
 
-            this.currentExactTheme = preferrance;
+            this.$store.commit("theme/setCurrentExactTheme", preferrance);
         },
         restoreTheme() {
             /**
