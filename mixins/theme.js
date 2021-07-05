@@ -1,4 +1,9 @@
 export const theme = {
+    data() {
+        return {
+            validValues: ["light", "dark", "auto"]
+        }
+    },
     methods: {
         getDeviceTheme() {
             /**
@@ -18,6 +23,16 @@ export const theme = {
              * or light.
              */
             return this.getDeviceTheme().toLowerCase() === "dark";
+        },
+        setTheme(value) {
+            /**
+             * Set the theme and store it to the localStorage so that it
+             * can be read whenever the page is laod.
+             */
+            if (!this.validValues.includes(value)) throw new Error(`Invalid value passed. Should be one of ${this.validValues.join(',')}`);
+
+            // Finally set the theme
+            localStorage.setItem("preferred-theme", value)
         }
     }
 }
