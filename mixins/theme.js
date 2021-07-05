@@ -6,6 +6,7 @@ export const theme = {
         return {
             themeKey: "preferred-theme",
             currentTheme: "auto",
+            currentExactTheme: "light",
             validValues: ["light", "dark", "auto"]
         }
     },
@@ -90,6 +91,8 @@ export const theme = {
                     bodyClassList.remove("dark");
                     break
             }
+
+            this.currentExactTheme = preferrance;
         },
         restoreTheme() {
             /**
@@ -110,9 +113,7 @@ export const theme = {
              */
             if (!this.isClientSide()) return "";
 
-            if (this.currentTheme !== "auto") return this.currentTheme === "dark";
-
-            return this.isDeviceDarkTheme();
+            return this.currentExactTheme === "dark";
         }
     }
 }
