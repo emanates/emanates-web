@@ -33,9 +33,15 @@
           "
         >
           <div class="options">
-            <button>Light</button>
-            <button>Dark</button>
-            <button>Auto</button>
+            <button :class="currentTheme == 'light' ? 'active' : ''">
+              Light
+            </button>
+            <button :class="currentTheme == 'dark' ? 'active' : ''">
+              Dark
+            </button>
+            <button :class="currentTheme == 'auto' ? 'active' : ''">
+              Auto
+            </button>
           </div>
         </div>
       </transition>
@@ -67,6 +73,10 @@ export default {
         display: block;
 
         @apply p-1 hover:text-green-500 transition ease-in duration-100 font-medium;
+
+        &.active {
+          @apply text-green-500;
+        }
       }
     }
   }

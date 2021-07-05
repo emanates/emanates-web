@@ -68,12 +68,15 @@ export const theme = {
              */
             if (!this.validValues.includes(preferrance)) preferrance = "auto";
 
+            // Update the currentTheme value
+            this.currentTheme = preferrance;
+
             if (preferrance === "auto") preferrance = this.getDeviceTheme();
 
             // Finally set the theme
             // At this point the value of preferrance should be one of `dark` or `light`
             const bodyClassList = document.querySelector("body").classList;
-            const isDark = bodyClassList.includes("dark");
+            const isDark = bodyClassList.contains("dark");
 
             switch (true) {
                 case preferrance === "dark" && !isDark:
@@ -83,9 +86,6 @@ export const theme = {
                     bodyClassList.remove("dark");
                     break
             }
-
-            // Finally change the value of currentTheme
-            this.currentTheme = preferrance;
         },
         restoreTheme() {
             /**
