@@ -23,7 +23,8 @@ export default {
   ],
 
   plugins: [
-    { src: '~/plugins/unicons', mode: 'client' }
+    { src: '~/plugins/unicons', mode: 'client' },
+    '~/plugins/micromodal.client.js'
   ],
 
   components: true,
