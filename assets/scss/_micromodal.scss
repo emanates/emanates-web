@@ -1,8 +1,6 @@
-/**************************\
-  Basic Modal Styles
-\**************************/
-  
-  .modal__overlay {
+/* stylelint-disable */
+
+.modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,7 +22,7 @@
     overflow-y: auto;
     box-sizing: border-box;
 
-    @apply dark:bg-darkhigh;
+    @apply dark:bg-darklow;
 
     @media only screen and (max-width: 700px) {
         width: 100%;
