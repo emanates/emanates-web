@@ -27,7 +27,9 @@
         <span class="text-gray-500">Updated</span> {{ getRelativeUpdatedAt }}
       </p>
       <div class="separator mx-2">&bull;</div>
-      <div class="share--content"></div>
+      <div class="share--content">
+        <share />
+      </div>
     </div>
     <div class="author flex items-center mt-8 dark:text-gray-300">
       <div class="avatar">
@@ -61,9 +63,10 @@
 <script>
 import moment from 'moment'
 import Label from '../Label.vue'
+import Share from './Share.vue'
 
 export default {
-  components: { Label },
+  components: { Label, Share },
   props: {
     post: {
       type: Object,
