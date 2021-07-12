@@ -27,7 +27,7 @@
             v-if="showExternalOptions"
             class="external--options flex items-center"
           >
-            <button type="button">
+            <a href="">
               <client-only>
                 <unicon
                   name="twitter"
@@ -39,8 +39,8 @@
                   class="icon"
                 />
               </client-only>
-            </button>
-            <button type="button">
+            </a>
+            <a href="">
               <client-only>
                 <unicon
                   name="linkedin"
@@ -52,8 +52,8 @@
                   class="icon"
                 />
               </client-only>
-            </button>
-            <button type="button">
+            </a>
+            <a href="">
               <client-only>
                 <unicon
                   name="facebook"
@@ -65,7 +65,7 @@
                   class="icon"
                 />
               </client-only>
-            </button>
+            </a>
           </div>
           <div v-else class="dark:text-white">Share post via ...</div>
           <div class="copy__container text-base">
@@ -227,7 +227,7 @@ export default {
   .share--content {
     .share--options {
       .external--options {
-        button {
+        a {
           @apply mr-3 px-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-100 ease-in;
 
           .icon {

@@ -60,6 +60,26 @@ export const share = {
              * Check if the native share menu is present or not.
              */
             return Boolean(navigator.share);
+        },
+        buildShareLinks() {
+            /**
+             * Build the share links to show for external options.
+             */
+            /* const shareLinks = [
+                {
+                    url: 'https://twitter.com/intent/tweet?url=%s&text=%s',
+                    buildFunc: '',
+                    iconName: 'twitter',
+                },
+                {
+                    url: 'https://www.linkedin.com/sharing/share-offsite/?mini=true&url=%s&title=%s',
+                    iconName: 'linkedin',
+                },
+                {
+                    url: '',
+                    iconName: 'facebook',
+                },
+            ], */
         }
     },
 }
