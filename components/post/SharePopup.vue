@@ -96,14 +96,13 @@
               >
                 <client-only>
                   <unicon v-if="!isClicked" name="copy" fill="black" />
-                  <span v-else>
+                  <span v-else class="mt-1">
                     <unicon
                       v-if="copyStatus"
                       name="check-circle"
                       fill="black"
-                      class="mt-1"
                     />
-                    <unicon v-else name="exclamation-traingle" fill="black" />
+                    <unicon v-else name="exclamation-triangle" fill="black" />
                   </span>
                 </client-only>
               </button>
