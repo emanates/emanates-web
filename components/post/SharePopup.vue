@@ -14,7 +14,10 @@
           </p>
         </div>
         <div class="share--options mt-6">
-          <div class="external--options flex items-center">
+          <div
+            v-if="showExternalOptions"
+            class="external--options flex items-center"
+          >
             <button type="button">
               <client-only>
                 <unicon name="twitter" fill="black" class="icon" />
@@ -31,6 +34,7 @@
               </client-only>
             </button>
           </div>
+          <div v-else>Share post via ...</div>
           <div class="copy__container text-base">
             <div class="copy--content flex flex-wrap rounded-md mt-6">
               <input
@@ -98,11 +102,13 @@
 
 <script>
 import { share } from '@/mixins/share'
+import { utils } from '@/mixins/utils'
+
 import Modal from '../Modal.vue'
 
 export default {
   components: { Modal },
-  mixins: [share],
+  mixins: [share, utils],
   props: {
     post: {
       type: Object,
@@ -120,6 +126,19 @@ export default {
   computed: {
     getShareUrl() {
       return this.shareUrl
+    },
+    showExternalOptions() {
+      /**
+       * Check if to show the external options or not.
+       *
+       * We will hide the external options if the screen size
+       * is smaller thatn 768px and native share is present.
+       *
+       * Else fallback to the external options.
+       */
+      if (!this.isClientSide()) return true
+
+      return !(window.innerWidth <= 768 && this.isNativePresent())
     },
   },
   mounted() {
