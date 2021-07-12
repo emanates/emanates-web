@@ -101,6 +101,7 @@
                       v-if="copyStatus"
                       name="check-circle"
                       fill="black"
+                      class="mt-1"
                     />
                     <unicon v-else name="exclamation-traingle" fill="black" />
                   </span>
