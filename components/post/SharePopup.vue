@@ -95,28 +95,14 @@
                 @click="copyLink"
               >
                 <client-only>
-                  <unicon
-                    v-if="!isClicked"
-                    name="copy"
-                    fill="black"
-                    width="30"
-                    height="30"
-                  />
+                  <unicon v-if="!isClicked" name="copy" fill="black" />
                   <span v-else>
                     <unicon
                       v-if="copyStatus"
                       name="check-cirlce"
                       fill="black"
-                      width="30"
-                      height="30"
                     />
-                    <unicon
-                      v-else
-                      name="exclamation-traingle"
-                      fill="black"
-                      width="30"
-                      height="30"
-                    />
+                    <unicon v-else name="exclamation-traingle" fill="black" />
                   </span>
                 </client-only>
               </button>
