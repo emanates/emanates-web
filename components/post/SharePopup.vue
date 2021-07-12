@@ -13,11 +13,36 @@
             Share with others
           </p>
         </div>
-        <div class="share--options mt-2">
-          <div class="external--options flex justify-between items-center">
+        <div class="share--options mt-6">
+          <div class="external--options flex items-center">
             <button type="button">
               <client-only>
-                <unicon name="twitter" fill="black" hover-fill="#34D399" />
+                <unicon
+                  name="twitter"
+                  fill="black"
+                  class=""
+                  hover-fill="#34D399"
+                />
+              </client-only>
+            </button>
+            <button type="button">
+              <client-only>
+                <unicon
+                  name="linkedin"
+                  fill="black"
+                  class=""
+                  hover-fill="#34D399"
+                />
+              </client-only>
+            </button>
+            <button type="button">
+              <client-only>
+                <unicon
+                  name="facebook"
+                  fill="black"
+                  class=""
+                  hover-fill="#34D399"
+                />
               </client-only>
             </button>
           </div>
@@ -40,3 +65,17 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.share--popup__container {
+  .share--content {
+    .share--options {
+      .external--options {
+        button {
+          @apply mr-5;
+        }
+      }
+    }
+  }
+}
+</style>
