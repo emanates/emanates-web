@@ -12,7 +12,7 @@
           <unicon name="upload-alt" fill="black" hover-fill="#34D399" />
         </client-only>
       </button>
-      <share-popup ref="sharePopup" />
+      <share-popup ref="sharePopup" :post="post" />
     </div>
   </div>
 </template>
@@ -23,6 +23,13 @@ import SharePopup from '@/components/post/SharePopup.vue'
 export default {
   name: 'Share',
   components: { SharePopup },
+  props: {
+    post: {
+      type: Object,
+      require: true,
+      default: null,
+    },
+  },
   methods: {
     showShare() {
       /**

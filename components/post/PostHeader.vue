@@ -28,7 +28,7 @@
       </p>
       <div class="separator mx-2">&bull;</div>
       <div class="share--content">
-        <share />
+        <share :post="post" />
       </div>
     </div>
     <div class="author flex items-center mt-8 dark:text-gray-300">
