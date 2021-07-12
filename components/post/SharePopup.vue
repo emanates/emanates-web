@@ -17,35 +17,17 @@
           <div class="external--options flex items-center">
             <button type="button">
               <client-only>
-                <unicon
-                  name="twitter"
-                  fill="black"
-                  width="30"
-                  height="30"
-                  class=""
-                />
+                <unicon name="twitter" fill="black" class="icon" />
               </client-only>
             </button>
             <button type="button">
               <client-only>
-                <unicon
-                  name="linkedin"
-                  fill="black"
-                  width="30"
-                  height="30"
-                  class=""
-                />
+                <unicon name="linkedin" fill="black" class="icon" />
               </client-only>
             </button>
             <button type="button">
               <client-only>
-                <unicon
-                  name="facebook"
-                  fill="black"
-                  width="30"
-                  height="30"
-                  class=""
-                />
+                <unicon name="facebook" fill="black" class="icon" />
               </client-only>
             </button>
           </div>
@@ -174,7 +156,11 @@ export default {
     .share--options {
       .external--options {
         button {
-          @apply mr-6;
+          @apply mr-3 px-2 rounded-md hover:bg-gray-200 transition duration-100 ease-in;
+
+          .icon {
+            @apply mt-2;
+          }
         }
       }
     }
