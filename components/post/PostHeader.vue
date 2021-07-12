@@ -10,6 +10,8 @@
         py-8
         font-bold
         2xl:leading-normal
+        lg:leading-normal
+        md:leading-normal
         leading-snug
         dark:text-gray-100
       "
