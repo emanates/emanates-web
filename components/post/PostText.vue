@@ -70,19 +70,19 @@ export default {
       }
 
       h1 {
-        @apply text-5xl;
+        @apply md:text-5xl text-4xl;
       }
 
       h2 {
-        @apply text-4xl;
+        @apply md:text-4xl text-3xl;
       }
 
       h3 {
-        @apply text-3xl;
+        @apply md:text-3xl text-2xl;
       }
 
       h4 {
-        @apply text-2xl;
+        @apply md:text-2xl text-xl;
       }
 
       a {

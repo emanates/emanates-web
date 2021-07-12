@@ -4,8 +4,8 @@
     <h1
       class="
         2xl:text-7xl
-        xl:text-6xl
-        lg:text-5xl
+        lg:text-6xl
+        md:text-5xl
         text-4xl
         py-8
         font-bold
