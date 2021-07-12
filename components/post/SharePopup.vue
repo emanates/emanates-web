@@ -8,8 +8,17 @@
     >
       <div class="share--content">
         <div class="text--content">
-          <h1 class="text-xl font-bold">{{ post.title }}</h1>
-          <p class="mt-2 text-base text-gray-500 font-medium md:block hidden">
+          <h1 class="text-xl dark:text-white font-bold">{{ post.title }}</h1>
+          <p
+            class="
+              mt-2
+              text-base text-gray-500
+              dark:text-gray-400
+              font-medium
+              md:block
+              hidden
+            "
+          >
             Share with others
           </p>
         </div>
@@ -20,21 +29,45 @@
           >
             <button type="button">
               <client-only>
-                <unicon name="twitter" fill="black" class="icon" />
+                <unicon
+                  name="twitter"
+                  :fill="
+                    $store.state.theme.currentExactTheme == 'dark'
+                      ? 'white'
+                      : 'black'
+                  "
+                  class="icon"
+                />
               </client-only>
             </button>
             <button type="button">
               <client-only>
-                <unicon name="linkedin" fill="black" class="icon" />
+                <unicon
+                  name="linkedin"
+                  :fill="
+                    $store.state.theme.currentExactTheme == 'dark'
+                      ? 'white'
+                      : 'black'
+                  "
+                  class="icon"
+                />
               </client-only>
             </button>
             <button type="button">
               <client-only>
-                <unicon name="facebook" fill="black" class="icon" />
+                <unicon
+                  name="facebook"
+                  :fill="
+                    $store.state.theme.currentExactTheme == 'dark'
+                      ? 'white'
+                      : 'black'
+                  "
+                  class="icon"
+                />
               </client-only>
             </button>
           </div>
-          <div v-else>Share post via ...</div>
+          <div v-else class="dark:text-white">Share post via ...</div>
           <div class="copy__container text-base">
             <div class="copy--content flex flex-wrap rounded-md mt-6">
               <input
@@ -81,14 +114,34 @@
                 @click="copyLink"
               >
                 <client-only>
-                  <unicon v-if="!isClicked" name="copy" fill="black" />
+                  <unicon
+                    v-if="!isClicked"
+                    name="copy"
+                    :fill="
+                      $store.state.theme.currentExactTheme == 'dark'
+                        ? 'white'
+                        : 'black'
+                    "
+                  />
                   <span v-else class="mt-1">
                     <unicon
                       v-if="copyStatus"
                       name="check-circle"
-                      fill="black"
+                      :fill="
+                        $store.state.theme.currentExactTheme == 'dark'
+                          ? 'white'
+                          : 'black'
+                      "
                     />
-                    <unicon v-else name="exclamation-triangle" fill="black" />
+                    <unicon
+                      v-else
+                      name="exclamation-triangle"
+                      :fill="
+                        $store.state.theme.currentExactTheme == 'dark'
+                          ? 'white'
+                          : 'black'
+                      "
+                    />
                   </span>
                 </client-only>
               </button>
@@ -175,7 +228,7 @@ export default {
     .share--options {
       .external--options {
         button {
-          @apply mr-3 px-2 rounded-md hover:bg-gray-200 transition duration-100 ease-in;
+          @apply mr-3 px-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-100 ease-in;
 
           .icon {
             @apply mt-2;

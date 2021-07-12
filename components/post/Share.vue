@@ -9,7 +9,13 @@
         @click="showShare"
       >
         <client-only>
-          <unicon name="upload-alt" fill="black" hover-fill="#34D399" />
+          <unicon
+            name="upload-alt"
+            :fill="
+              $store.state.theme.currentExactTheme == 'dark' ? 'white' : 'black'
+            "
+            hover-fill="#34D399"
+          />
         </client-only>
       </button>
       <share-popup ref="sharePopup" :post="post" />

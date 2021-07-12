@@ -20,7 +20,15 @@
             @click="closeModal"
           >
             <client-only>
-              <unicon name="times" fill="black" hover-fill="#34D399" />
+              <unicon
+                name="times"
+                :fill="
+                  $store.state.theme.currentExactTheme == 'dark'
+                    ? 'white'
+                    : 'black'
+                "
+                hover-fill="#34D399"
+              />
             </client-only>
           </button>
         </header>
