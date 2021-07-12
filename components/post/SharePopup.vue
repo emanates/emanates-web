@@ -20,8 +20,9 @@
                 <unicon
                   name="twitter"
                   fill="black"
+                  width="30"
+                  height="30"
                   class=""
-                  hover-fill="#34D399"
                 />
               </client-only>
             </button>
@@ -30,8 +31,9 @@
                 <unicon
                   name="linkedin"
                   fill="black"
+                  width="30"
+                  height="30"
                   class=""
-                  hover-fill="#34D399"
                 />
               </client-only>
             </button>
@@ -40,8 +42,9 @@
                 <unicon
                   name="facebook"
                   fill="black"
+                  width="30"
+                  height="30"
                   class=""
-                  hover-fill="#34D399"
                 />
               </client-only>
             </button>
@@ -72,7 +75,7 @@ export default {
     .share--options {
       .external--options {
         button {
-          @apply mr-5;
+          @apply mr-6;
         }
       }
     }
