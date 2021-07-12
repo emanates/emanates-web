@@ -49,6 +49,79 @@
               </client-only>
             </button>
           </div>
+          <div class="copy__container text-base">
+            <div class="copy--content flex flex-wrap rounded-md mt-6">
+              <input
+                ref="linkContent"
+                type="url"
+                readonly
+                class="
+                  select-all
+                  p-2
+                  text-gray-700
+                  flex-grow
+                  truncate
+                  border
+                  dark:border-gray-700
+                  rounded-l-md
+                  focus:outline-none
+                  dark:bg-darklow
+                  dark:text-gray-100
+                "
+                :value="getShareUrl"
+                @click="selectText($event)"
+              />
+              <button
+                type="button"
+                class="
+                  md:w-1/12
+                  w-2/12
+                  rounded-r-md
+                  flex
+                  justify-center
+                  items-center
+                  bg-gray-200
+                  dark:bg-gray-800
+                  text-gray-500
+                  dark:text-gray-300
+                  focus:outline-none
+                  hover:bg-gray-300
+                  dark:hover:bg-gray-700
+                  transition
+                  duration-100
+                  ease-in
+                "
+                title="Copy Link"
+                @click="copyLink"
+              >
+                <client-only>
+                  <unicon
+                    v-if="!isClicked"
+                    name="copy"
+                    fill="black"
+                    width="30"
+                    height="30"
+                  />
+                  <span v-else>
+                    <unicon
+                      v-if="copyStatus"
+                      name="check-cirlce"
+                      fill="black"
+                      width="30"
+                      height="30"
+                    />
+                    <unicon
+                      v-else
+                      name="exclamation-traingle"
+                      fill="black"
+                      width="30"
+                      height="30"
+                    />
+                  </span>
+                </client-only>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </Modal>
@@ -64,6 +137,43 @@ export default {
       type: Object,
       require: true,
       default: null,
+    },
+  },
+  data() {
+    return {
+      copyStatus: false,
+      shareUrl: '',
+      isClicked: false,
+    }
+  },
+  computed: {
+    getShareUrl() {
+      return this.shareUrl
+    },
+  },
+  mounted() {
+    this.shareUrl = document.location
+  },
+  methods: {
+    selectText(el) {
+      /**
+       * Select the text when the input container is clicked by
+       * the user.
+       */
+      el.currentTarget.select()
+    },
+    async copyLink() {
+      /**
+       * Copy the link to the users clipboard.
+       */
+      this.copyStatus = await this.copyUrl(
+        this.shareUrl,
+        this.$refs.linkContent
+      )
+      this.isClicked = true
+      setTimeout(() => {
+        this.isClicked = false
+      }, 5000)
     },
   },
 }
