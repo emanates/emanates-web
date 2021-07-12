@@ -45,7 +45,9 @@
               </client-only>
             </a>
           </div>
-          <div v-else class="dark:text-white">Share post via ...</div>
+          <div v-else class="dark:text-white" @click="showNativeShare()">
+            Share post via ...
+          </div>
           <div class="copy__container text-base">
             <div class="copy--content flex flex-wrap rounded-md mt-6">
               <input
@@ -152,6 +154,7 @@ export default {
       copyStatus: false,
       shareUrl: '',
       isClicked: false,
+      shareLinks: [],
     }
   },
   computed: {

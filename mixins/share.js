@@ -51,7 +51,7 @@ export const share = {
              */
             await navigator.share({
                 title,
-                url: this.buildShareUrl(slug),
+                url: window.location,
                 text: description,
             })
         },
