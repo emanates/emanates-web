@@ -9,7 +9,7 @@
       <div class="share--content">
         <div class="text--content">
           <h1 class="text-xl font-bold">{{ post.title }}</h1>
-          <p class="mt-2 text-base text-gray-500 font-medium">
+          <p class="mt-2 text-base text-gray-500 font-medium md:block hidden">
             Share with others
           </p>
         </div>
