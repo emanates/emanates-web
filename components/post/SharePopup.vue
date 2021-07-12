@@ -218,6 +218,7 @@ export default {
         this.isClicked = false
       }, 5000)
     },
+    buildShareLinks() {},
   },
 }
 </script>

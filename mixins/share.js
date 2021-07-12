@@ -61,25 +61,23 @@ export const share = {
              */
             return Boolean(navigator.share);
         },
-        buildShareLinks() {
+        buildTwitterLink(post) {
             /**
-             * Build the share links to show for external options.
+             * Build Twitter Link based on the passed post details.
              */
-            /* const shareLinks = [
-                {
-                    url: 'https://twitter.com/intent/tweet?url=%s&text=%s',
-                    buildFunc: '',
-                    iconName: 'twitter',
-                },
-                {
-                    url: 'https://www.linkedin.com/sharing/share-offsite/?mini=true&url=%s&title=%s',
-                    iconName: 'linkedin',
-                },
-                {
-                    url: '',
-                    iconName: 'facebook',
-                },
-            ], */
-        }
+            return `https://twitter.com/intent/tweet?url=${window.location}&text=${post.title}`
+        },
+        buildLinkedInLink(post) {
+            /**
+             * Build LinkedIn share link based on the passed post details.
+             */
+            return `https://www.linkedin.com/sharing/share-offsite/?mini=true&url=${window.location}&title=${post.title}`
+        },
+        buildFacebookLink(post) {
+            /**
+             * Build Facebook share link based on the passed post details.
+             */
+            return `https://www.facebook.com/sharer.php?u=${window.location}`
+        },
     },
 }
