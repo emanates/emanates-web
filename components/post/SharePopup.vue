@@ -27,36 +27,14 @@
             v-if="showExternalOptions"
             class="external--options flex items-center"
           >
-            <a href="">
+            <a
+              v-for="(value, id) in shareLinks"
+              :key="id"
+              :href="value.buildFunc(post)"
+            >
               <client-only>
                 <unicon
-                  name="twitter"
-                  :fill="
-                    $store.state.theme.currentExactTheme == 'dark'
-                      ? 'white'
-                      : 'black'
-                  "
-                  class="icon"
-                />
-              </client-only>
-            </a>
-            <a href="">
-              <client-only>
-                <unicon
-                  name="linkedin"
-                  :fill="
-                    $store.state.theme.currentExactTheme == 'dark'
-                      ? 'white'
-                      : 'black'
-                  "
-                  class="icon"
-                />
-              </client-only>
-            </a>
-            <a href="">
-              <client-only>
-                <unicon
-                  name="facebook"
+                  :name="value.iconName"
                   :fill="
                     $store.state.theme.currentExactTheme == 'dark'
                       ? 'white'
@@ -196,6 +174,8 @@ export default {
   },
   mounted() {
     this.shareUrl = document.location
+
+    this.buildShareLinks()
   },
   methods: {
     selectText(el) {
@@ -218,7 +198,26 @@ export default {
         this.isClicked = false
       }, 5000)
     },
-    buildShareLinks() {},
+    buildShareLinks() {
+      /**
+       * Build share links for different sites and return an array
+       * with icon names and such
+       */
+      this.shareLinks = [
+        {
+          buildFunc: this.buildTwitterLink,
+          iconName: 'twitter',
+        },
+        {
+          buildFunc: this.buildLinkedInLink,
+          iconName: 'linkedin',
+        },
+        {
+          buildFunc: this.buildFacebookLink,
+          iconName: 'facebook',
+        },
+      ]
+    },
   },
 }
 </script>
