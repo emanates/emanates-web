@@ -99,7 +99,7 @@
                   <span v-else>
                     <unicon
                       v-if="copyStatus"
-                      name="check-cirlce"
+                      name="check-circle"
                       fill="black"
                     />
                     <unicon v-else name="exclamation-traingle" fill="black" />
@@ -115,9 +115,12 @@
 </template>
 
 <script>
+import { share } from '@/mixins/share'
 import Modal from '../Modal.vue'
+
 export default {
   components: { Modal },
+  mixins: [share],
   props: {
     post: {
       type: Object,
