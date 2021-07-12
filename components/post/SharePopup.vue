@@ -13,6 +13,15 @@
             Share with others
           </p>
         </div>
+        <div class="share--options mt-2">
+          <div class="external--options flex justify-between items-center">
+            <button type="button">
+              <client-only>
+                <unicon name="twitter" fill="black" hover-fill="#34D399" />
+              </client-only>
+            </button>
+          </div>
+        </div>
       </div>
     </Modal>
   </div>
@@ -30,4 +39,4 @@ export default {
     },
   },
 }
-</script>Modal
+</script>
