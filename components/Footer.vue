@@ -10,7 +10,6 @@
         py-6
         flex
         text-gray-500
-        md:justify-start
         justify-center
       "
     >
@@ -25,7 +24,7 @@
         >
       </div>
       <div
-        class="separator border-l border-gray-700 dark:border-gray-500 mx-6"
+        class="separator border-l border-gray-700 dark:border-gray-500 mx-8"
       ></div>
       <a
         href="https://github.com/emanates/emanates-web"
