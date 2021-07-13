@@ -8,12 +8,12 @@
         mr-auto
         ml-auto
         py-6
-        flex
+        flex flex-wrap
         text-gray-500
         justify-center
       "
     >
-      <div class="powered-by">
+      <div class="powered-by md:w-auto w-full text-center">
         Powered by
         <a
           href="https://emanat.es"
@@ -24,11 +24,26 @@
         >
       </div>
       <div
-        class="separator border-l border-gray-700 dark:border-gray-500 mx-8"
+        class="
+          separator
+          border-l border-gray-700
+          dark:border-gray-500
+          mx-8
+          md:block
+          hidden
+        "
       ></div>
       <a
         href="https://github.com/emanates/emanates-web"
-        class="github flex items-center text-gray-700 dark:text-gray-300"
+        class="
+          github
+          flex
+          items-center
+          text-gray-700
+          dark:text-gray-300
+          md:mt-0
+          mt-6
+        "
         target="_blank"
         rel="noopener noreferrer"
       >
