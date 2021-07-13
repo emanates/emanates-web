@@ -56,7 +56,7 @@ export default {
       ul {
         list-style-position: outside;
         list-style-type: decimal;
-        margin-left: 20px;
+        margin-left: 40px;
         li {
           @apply my-1;
         }
