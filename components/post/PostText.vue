@@ -35,13 +35,13 @@ export default {
 .post--text__container {
   .post--text {
     ::v-deep {
-      @apply text-lg dark:text-gray-200;
+      @apply md:text-lg text-base dark:text-gray-200;
 
       p,
       ol,
       ul,
       table {
-        @apply my-8 leading-relaxed;
+        @apply my-8 leading-relaxed md:font-normal font-medium;
 
         > code {
           @apply bg-blue-100 dark:bg-blue-300 text-blue-600 dark:text-blue-700 rounded-md;
@@ -74,15 +74,15 @@ export default {
       }
 
       h2 {
-        @apply md:text-4xl text-3xl;
+        @apply md:text-4xl text-2xl;
       }
 
       h3 {
-        @apply md:text-3xl text-2xl;
+        @apply md:text-3xl text-xl;
       }
 
       h4 {
-        @apply md:text-2xl text-xl;
+        @apply md:text-2xl text-lg;
       }
 
       a {
