@@ -3,6 +3,7 @@
     <Label :label="post.labels.edges[0].node" />
     <h1
       class="
+        2xl:text-7xl
         lg:text-6xl
         md:text-5xl
         text-4xl
