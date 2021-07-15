@@ -84,20 +84,6 @@ export default {
         dateStyle: 'medium',
       })
     },
-    extractPostDescription(comment) {
-      /**
-       * Extract the post description from the comment syntax
-       * of markdown. This method is to be called if the comment
-       * is found.
-       */
-      const re = /\(.*?\)/
-
-      // Find just the text first
-      const match = comment.match(re)
-
-      // Now remove the braces
-      return match[0].replace(/\(|\)/g, '')
-    },
     findPostDescription(markdownContent) {
       /**
        * Extract the description of the post from the content.
@@ -107,7 +93,7 @@ export default {
        */
       const matches = this.findMetaFromComments(markdownContent)
 
-      return matches ? this.extractPostDescription(matches[0]) : null
+      return matches ? matches[0] : null
     },
   },
 }
