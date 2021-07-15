@@ -23,6 +23,8 @@ export const meta = {
             const re = /\[\/\/\].*?#.*?\(.*?\)/g
             const matches = markdownContent.match(re)
 
+            if (!matches) return null;
+
             return matches.map(element => {
                 return this.cleanMetaTags(element)
             })
