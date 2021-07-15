@@ -1,5 +1,7 @@
 <template>
-  <div class="post--cover__container"></div>
+  <div v-if="cover" class="post--cover__container">
+    <img :src="cover" alt="post.title" />
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,11 @@ export default {
       /**
        * Extract the post cover from the posts body.
        */
-      this.cover = this.findMetaFromComments(this.post.body)
+      const meta = this.findMetaFromComments(this.post.body)
+
+      // Check if cover is present
+      if (meta.length < 2) this.cover = null
+      this.cover = meta[1]
     },
   },
 }
