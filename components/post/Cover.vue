@@ -1,5 +1,5 @@
 <template>
-  <div v-if="cover" class="post--cover__container">
+  <div v-if="cover" class="post--cover__container py-8">
     <img :src="cover" alt="post.title" />
   </div>
 </template>

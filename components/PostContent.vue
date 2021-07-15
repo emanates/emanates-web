@@ -1,8 +1,8 @@
 <template>
   <div class="post--content__container">
-    <post-header :post="post" />
+    <post-header :post="post" class="2xl:w-5/6 w-full mr-auto ml-auto" />
     <cover :post="post" />
-    <post-text :post="post" />
+    <post-text :post="post" class="2xl:w-5/6 w-full mr-auto ml-auto" />
   </div>
 </template>
 
