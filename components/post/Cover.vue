@@ -33,8 +33,8 @@ export default {
       const meta = this.findMetaFromComments(this.post.body)
 
       // Check if cover is present
-      if (meta.length < 2) this.cover = null
-      this.cover = meta[1]
+      if (meta != null && meta.length >= 2) this.cover = meta[1]
+      else this.cover = null
     },
   },
 }
