@@ -7,7 +7,7 @@ export const meta = {
              * 
              * We will extract them and return them accordingly.
              */
-            const re = /\[\/\/\].*?#.*?\(.*?\)/
+            const re = /\[\/\/\].*?#.*?\(.*?\)/g
             const matches = markdownContent.match(re)
 
             return matches
