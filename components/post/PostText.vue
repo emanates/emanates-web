@@ -1,6 +1,6 @@
 <template>
   <div class="post--text__container pb-6 mb-12">
-    <div class="post--text" v-html="getPostText"></div>
+    <div ref="textContent" class="post--text" v-html="getPostText"></div>
   </div>
 </template>
 
@@ -25,6 +25,22 @@ export default {
   mounted() {
     // Run highlight again so the pre tags get the class
     Prism.highlightAll()
+    this.makeLinksExternal()
+  },
+  methods: {
+    makeLinksExternal() {
+      /**
+       * Go through all the content and find the links in
+       * the content.
+       *
+       * Make all the links open in a new tab instead of
+       * the current tab.
+       */
+      const matches = this.$refs.textContent.getElementsByTagName('a')
+      for (const link of matches) {
+        link.target = '_blank'
+      }
+    },
   },
 }
 </script>
