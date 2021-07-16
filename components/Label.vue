@@ -11,7 +11,9 @@
         rounded-2xl
         uppercase
       "
-      :style="`background-color: #${getColorForLabel(label.color)}`"
+      :style="`background-color: #${getColorForLabel(
+        label.color
+      )}; color: ${determineFgColor(label.color)}`"
     >
       {{ label.name }}
     </div>
