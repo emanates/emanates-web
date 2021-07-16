@@ -56,6 +56,7 @@ export default {
       p,
       ol,
       ul,
+      li,
       table {
         @apply my-8 leading-relaxed md:font-normal font-medium;
 
