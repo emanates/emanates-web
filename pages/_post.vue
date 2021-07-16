@@ -25,7 +25,7 @@ export default {
         body
         createdAt
         updatedAt
-        labels (first: 1) {
+        labels (first: 5) {
           edges {
             node {
               name

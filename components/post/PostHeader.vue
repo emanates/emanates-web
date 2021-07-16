@@ -6,7 +6,8 @@
         2xl:text-7xl
         md:text-5xl
         text-4xl
-        py-8
+        pt-8
+        pb-4
         font-bold
         2xl:leading-normal
         lg:leading-normal
@@ -33,6 +34,14 @@
       <div class="share--content">
         <share :post="post" />
       </div>
+    </div>
+    <div
+      v-if="areTagsPresent"
+      class="tags pt-3 flex items-center text-gray-500 dark:text-gray-600"
+    >
+      <p v-for="(value, id) in getTags" :key="id" class="mr-2">
+        #{{ value.node.name }}
+      </p>
     </div>
     <div class="author flex items-center mt-8 dark:text-gray-300">
       <div class="avatar">
@@ -80,6 +89,12 @@ export default {
   computed: {
     getRelativeUpdatedAt() {
       return moment(this.post.updatedAt).fromNow()
+    },
+    getTags() {
+      return this.post.labels.edges.slice(1)
+    },
+    areTagsPresent() {
+      return this.getTags.length
     },
   },
 }
