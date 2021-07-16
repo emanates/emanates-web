@@ -11,7 +11,7 @@
         rounded-2xl
         uppercase
       "
-      :class="getColorClassForLabel(label.color)"
+      :style="`background-color: #${getColorForLabel(label.color)}`"
     >
       {{ label.name }}
     </div>
@@ -32,7 +32,7 @@ export default {
     },
   },
   methods: {
-    getColorClassForLabel(githubColorCode) {
+    getColorForLabel(githubColorCode) {
       /**
        * Get the color code mapping for the label as
        * returned by GitHub.
