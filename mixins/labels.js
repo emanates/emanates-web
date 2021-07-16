@@ -4,7 +4,8 @@ export const labels = {
             colorMap: {
                 "0075ca": "a7f3d0",
                 "1089DD": "bfdbfe",
-                "FE7584": "fecaca"
+                "FE7584": "fecaca",
+                "650646": "ddd6fe"
             }
         }
     },
