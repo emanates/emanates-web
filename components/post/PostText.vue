@@ -111,7 +111,7 @@ export default {
       }
 
       blockquote {
-        @apply border-l-8 border-yellow-300 bg-yellow-100 dark:border-yellow-400 dark:bg-yellow-200 dark:text-gray-800;
+        @apply border-l-8 border-yellow-300 bg-gray-100 dark:border-yellow-500 dark:bg-black dark:text-gray-300 rounded;
 
         padding: 20px 15px;
 
