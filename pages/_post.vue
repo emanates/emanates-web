@@ -50,6 +50,8 @@ export default {
     // The node value will be null if the nodeId is invalid
     if (response.data.node == null) return console.log('404 error')
 
+    // Inject the nodeId into the response
+    response.data.node.id = nodeId
     return { post: response.data.node }
   },
 }
