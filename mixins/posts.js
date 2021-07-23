@@ -49,10 +49,39 @@ export const posts = {
             const qlQuery = `
              query {
                  repository(owner: "${repo.owner}", name: "${repo.name}") {
-                     issues(filterBy: {})
+                     issues(filterBy: {labels: ${labels}}, first:4, orderBy: {field: UPDATED_AT, direction: DESC}) {
+                         nodes {
+                             ... on Issue {
+                                 id
+                                 title
+                                 createdAt
+                                 updatedAt
+                                 author {
+                                     login
+                                     url
+                                     avatarUrl
+                                 }
+                             }
+                         }
+                     }
                  }
-             }
-             `
+             }`
+            const response = await fetch('https://api.github.com/graphql', {
+                method: 'POST',
+                headers: {
+                    Authorization: `bearer ${process.env.EMANATES_TOKEN}`,
+                    'Content-Type': 'appliction/json',
+                },
+                body: JSON.stringify({
+                    query: qlQuery,
+                }),
+            }).then((response) => response.json())
+
+            // Check if error was thrown
+            // The node value will be null if the nodeId is invalid
+            if (response.data.node == null) return console.log('404 error')
+
+            return response.data.node
         }
     }
 }
