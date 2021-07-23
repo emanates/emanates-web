@@ -6,6 +6,18 @@ export const posts = {
         }
     },
     methods: {
+        getRepoSplitted() {
+            /**
+             * Get the repository owner and name splitted
+             * into different parts so they can be used
+             * accordingly.
+             */
+            const splittedRepo = this.repo.split("/")
+            return {
+                owner: splittedRepo[0],
+                name: splittedRepo[1]
+            }
+        },
         async getPosts() {
             /**
              * Extract issues from the repo passed in the env.
@@ -20,6 +32,27 @@ export const posts = {
                 }
             })
             return await response.json()
+        },
+        async getRelatedPosts(labels) {
+            /**
+             * Get related posts to the passed post.
+             * 
+             * We will find related based on the labels present on
+             * the current post.
+             * 
+             * We will show 3 related posts so we need to get 4 from
+             * GraphQL and then remove the self (if present), else
+             * slice to 3 and return.
+             */
+            const repo = this.getRepoSplitted();
+
+            const qlQuery = `
+             query {
+                 repository(owner: "${repo.owner}", name: "${repo.name}") {
+                     issues(filterBy: {})
+                 }
+             }
+             `
         }
     }
 }
