@@ -26,7 +26,9 @@ export default {
     },
   },
   async mounted() {
-    console.log(await this.getRelatedPosts(['devops']))
+    console.log(
+      await this.getRelatedPosts(['devops', 'guide', 'webdev'], this.post.id)
+    )
   },
 }
 </script>

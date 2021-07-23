@@ -33,7 +33,20 @@ export const posts = {
             })
             return await response.json()
         },
-        async getRelatedPosts(labels) {
+        getReturnableRelated(posts, postToRemove) {
+            /**
+             * Filter the passed list to remove the post whose relateds
+             * are being fetched.
+             * 
+             * postToRemove should be a string and it will be the ID of
+             * the post.
+             * 
+             * Once the post is removed (if it is present), return 3 of
+             * the first posts.
+             */
+            return posts.filter(post => post.id !== postToRemove).slice(0, 3)
+        },
+        async getRelatedPosts(labels, postToRemove) {
             /**
              * Get related posts to the passed post.
              * 
@@ -84,7 +97,7 @@ export const posts = {
             // The node value will be null if the nodeId is invalid
             if (response.data.repository.issues.nodes == null) return console.log('404 error')
 
-            return response.data.repository.issues.nodes
+            return this.getReturnableRelated(response.data.repository.issues.nodes, postToRemove)
         }
     }
 }
