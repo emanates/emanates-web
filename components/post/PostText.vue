@@ -58,7 +58,7 @@ export default {
       ul,
       li,
       table {
-        @apply my-8 leading-relaxed md:font-normal font-medium;
+        @apply my-8 leading-relaxed;
 
         > code {
           @apply bg-blue-100 dark:bg-indigo-900 text-blue-600 dark:text-blue-200 rounded-md;
