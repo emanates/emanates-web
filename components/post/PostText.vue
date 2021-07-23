@@ -61,7 +61,7 @@ export default {
         @apply my-8 leading-relaxed md:font-normal font-medium;
 
         > code {
-          @apply bg-blue-100 dark:bg-blue-300 text-blue-600 dark:text-blue-700 rounded-md;
+          @apply bg-blue-100 dark:bg-indigo-900 text-blue-600 dark:text-blue-200 rounded-md;
 
           @extend .font-inter;
 
