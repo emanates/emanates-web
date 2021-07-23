@@ -69,7 +69,7 @@ export const posts = {
             const response = await fetch('https://api.github.com/graphql', {
                 method: 'POST',
                 headers: {
-                    Authorization: `bearer ${process.env.EMANATES_TOKEN}`,
+                    Authorization: `bearer ${this.token}`,
                     'Content-Type': 'appliction/json',
                 },
                 body: JSON.stringify({
