@@ -117,6 +117,10 @@ export default {
 
         p {
           margin: 0;
+
+          code {
+            @apply dark:bg-gray-800;
+          }
         }
       }
 
