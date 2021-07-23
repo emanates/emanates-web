@@ -5,11 +5,8 @@
 </template>
 
 <script>
-import { posts } from '../mixins/posts'
-
 export default {
   components: {},
-  mixins: [posts],
   async asyncData() {
     const token = process.env.EMANATES_TOKEN
     const repo = process.env.REPO

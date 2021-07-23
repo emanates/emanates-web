@@ -46,10 +46,13 @@ export const posts = {
              */
             const repo = this.getRepoSplitted();
 
+            // Map every element to be in between quotes
+            labels = labels.map(el => `"${el}"`)
+
             const qlQuery = `
              query {
                  repository(owner: "${repo.owner}", name: "${repo.name}") {
-                     issues(filterBy: {labels: ${labels}}, first:4, orderBy: {field: UPDATED_AT, direction: DESC}) {
+                     issues(filterBy: {labels: [${labels.join(",")}]}, first:4, orderBy: {field: UPDATED_AT, direction: DESC}) {
                          nodes {
                              ... on Issue {
                                  id
@@ -79,9 +82,9 @@ export const posts = {
 
             // Check if error was thrown
             // The node value will be null if the nodeId is invalid
-            if (response.data.node == null) return console.log('404 error')
+            if (response.data.repository.issues.nodes == null) return console.log('404 error')
 
-            return response.data.node
+            return response.data.repository.issues.nodes
         }
     }
 }
