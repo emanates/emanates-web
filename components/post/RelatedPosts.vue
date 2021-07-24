@@ -1,8 +1,6 @@
 <template>
   <div class="related--posts__container md:pb-12 pb-8">
-    <h1 class="text-2xl md:font-semibold font-medium mt-3 mb-3">
-      Posts you might like
-    </h1>
+    <h1 class="text-2xl md:font-semibold font-medium mt-3 mb-3">More ...</h1>
     <div class="related--posts__content flex justify-around flex-wrap border-t">
       <related-post
         v-for="(value, id) in related"
