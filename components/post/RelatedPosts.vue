@@ -6,7 +6,7 @@
         v-for="(value, id) in related"
         :key="id"
         :related-post="value"
-        class="w-1/3"
+        class="md:w-1/3 w-full"
       />
     </div>
   </div>

@@ -17,7 +17,7 @@
     <div class="related--wrapper">
       <related-posts
         :related="related"
-        class="md:w-5/6 w-11/12 mr-auto ml-auto"
+        class="xl:w-5/6 w-11/12 mr-auto ml-auto"
       />
     </div>
   </div>
