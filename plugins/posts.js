@@ -72,7 +72,13 @@ async function getRelatedPosts(labels, postToRemove) {
                          id
                          title
                          createdAt
-                         updatedAt
+                         labels (first: 3) {
+                             nodes {
+                                 ... on Label {
+                                     name
+                                 }
+                             }
+                         }
                          author {
                              login
                              url
