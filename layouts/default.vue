@@ -8,7 +8,7 @@
         xl:w-3/4
         lg:w-3/4
         md:w-4/5
-        w-11/12
+        w-full
         mr-auto
         ml-auto
       "

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <posts-container :posts="posts" />
+    <posts-container :posts="posts" class="md:w-full w-11/12 mr-auto ml-auto" />
   </div>
 </template>
 
