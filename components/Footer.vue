@@ -44,7 +44,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p class="text">We're Open Source</p>
+          <p class="text md:font-normal font-medium">We're Open Source</p>
           <div class="github--icon--wrapper md:block hidden mt-1">
             <client-only>
               <client-only>
