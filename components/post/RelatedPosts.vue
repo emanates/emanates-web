@@ -1,8 +1,6 @@
 <template>
   <div class="related--posts__container border">
-    <div class="related--posts__content">
-      <h1>You might also like</h1>
-    </div>
+    <div class="related--posts__content"></div>
   </div>
 </template>
 

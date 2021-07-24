@@ -8,7 +8,7 @@
 import PostContent from '~/components/PostContent.vue'
 export default {
   components: { PostContent },
-  async asyncData({ app, $getPost, params }) {
+  async asyncData({ app, $getPost, params, $getRelatedPosts }) {
     // Try to extract the issue nodeId
     const slug = params.post
     const nodeId = slug.split('-').slice(-1)[0]
@@ -20,7 +20,12 @@ export default {
 
     const post = await $getPost(nodeId)
 
-    return { post }
+    // Once the post is fetched, fetch it's related posts
+    // using the nodeId and the labels
+    const labelNames = post.labels.edges.map((label) => label.node.name)
+    const relatedPosts = await $getRelatedPosts(labelNames, nodeId)
+
+    return { post, related: relatedPosts }
   },
 }
 </script>
