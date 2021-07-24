@@ -26,7 +26,8 @@
           mt-4
         "
       >
-        <span class="text-gray-600 text-sm md:inline-block block"
+        <span
+          class="text-gray-600 dark:text-gray-400 text-sm md:inline-block block"
           >Powered by</span
         >
         <a
