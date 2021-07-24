@@ -3,7 +3,7 @@
     <post-header :post="post" class="responsive--post" />
     <cover :post="post" />
     <post-text :post="post" class="responsive--post" />
-    <related-posts :post="post" class="responsive--post" />
+    <related-posts :post="post" class="md:w-full w-11/12 mr-auto ml-auto" />
   </div>
 </template>
 
