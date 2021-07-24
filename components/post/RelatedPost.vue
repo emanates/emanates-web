@@ -6,6 +6,7 @@
           :src="relatedPost.author.avatarUrl"
           width="45"
           alt="Author Avatar"
+          :title="relatedPost.author.login"
           class="rounded-full"
         />
       </div>
