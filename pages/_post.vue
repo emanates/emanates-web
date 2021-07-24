@@ -14,7 +14,9 @@
     >
       <post-content :post="post" />
     </div>
-    <related-posts :related="related" />
+    <div class="related--wrapper border-t">
+      <related-posts :related="related" class="w-11/12 mr-auto ml-auto" />
+    </div>
   </div>
 </template>
 
