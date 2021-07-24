@@ -13,10 +13,10 @@
       <div class="post--details w-5/6">
         <router-link
           :to="getSlug"
-          class="md:text-lg text-md font-medium hover:underline"
+          class="md:text-lg text-md font-medium hover:underline dark:text-white"
           >{{ relatedPost.title }}</router-link
         >
-        <p class="text-gray-600 text-sm font-medium mt-2">
+        <p class="text-gray-600 dark:text-gray-400 text-sm font-medium mt-2">
           {{
             new Date(relatedPost.createdAt).toLocaleDateString('en-US', {
               dateStyle: 'medium',
