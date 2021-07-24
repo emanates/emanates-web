@@ -3,66 +3,66 @@
     <div
       class="
         footer--content
-        md:w-3/4
+        md:w-5/6
         w-11/12
         mr-auto
         ml-auto
+        items-center
         py-6
-        flex flex-wrap
-        text-gray-500
+        flex flex-wrap-reverse
+        md:justify-between
         justify-center
       "
     >
-      <div class="powered-by md:w-auto w-full text-center">
-        Powered by
+      <div
+        class="
+          powered-by
+          md:w-1/2
+          w-full
+          text-2xl
+          md:text-left
+          text-center
+          md:mt-0
+          mt-4
+        "
+      >
+        <span class="text-gray-600 text-sm md:inline-block block"
+          >Powered by</span
+        >
         <a
           href="https://emanat.es"
-          class="text-gray-700 dark:text-gray-300 font-semibold"
+          class="text-black dark:text-white font-semibold"
           target="_blank"
           rel="noopener noreferrer"
           >Emanates</a
         >
       </div>
-      <div
-        class="
-          separator
-          border-l border-gray-700
-          dark:border-gray-500
-          mx-8
-          md:block
-          hidden
-        "
-      ></div>
-      <a
-        href="https://github.com/emanates/emanates-web"
-        class="
-          github
-          flex
-          items-center
-          text-gray-700
-          dark:text-gray-300
-          md:mt-0
-          mt-6
-        "
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <p class="text">We're Open Source</p>
-        <client-only>
-          <client-only>
-            <unicon
-              name="github"
-              :fill="
-                $store.state.theme.currentExactTheme == 'dark'
-                  ? 'white'
-                  : 'black'
-              "
-              class="ml-3"
-              hover-fill="#34D399"
-            />
-          </client-only>
-        </client-only>
-      </a>
+      <div class="links text-center">
+        <a
+          href="https://github.com/emanates/emanates-web"
+          class="github flex items-center text-gray-600 dark:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p class="text md:font-normal font-medium">We're Open Source</p>
+          <div class="github--icon--wrapper md:block hidden mt-1">
+            <client-only>
+              <client-only>
+                <unicon
+                  name="github"
+                  :fill="
+                    $store.state.theme.currentExactTheme == 'dark'
+                      ? 'white'
+                      : 'black'
+                  "
+                  class="ml-3"
+                  hover-fill="#34D399"
+                />
+              </client-only>
+            </client-only>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
