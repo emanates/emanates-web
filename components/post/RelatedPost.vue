@@ -10,9 +10,11 @@
         />
       </div>
       <div class="post--details w-5/6">
-        <router-link :to="getSlug" class="md:text-lg text-md font-medium">{{
-          relatedPost.title
-        }}</router-link>
+        <router-link
+          :to="getSlug"
+          class="md:text-lg text-md font-medium hover:underline"
+          >{{ relatedPost.title }}</router-link
+        >
         <p class="text-gray-600 text-sm font-medium mt-2">
           {{
             new Date(relatedPost.createdAt).toLocaleDateString('en-US', {
