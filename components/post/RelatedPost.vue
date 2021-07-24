@@ -10,7 +10,7 @@
         />
       </div>
       <div class="post--details w-5/6">
-        <h1 class="text-lg font-medium">{{ relatedPost.title }}</h1>
+        <h1 class="md:text-lg text-md font-medium">{{ relatedPost.title }}</h1>
         <p class="text-gray-600 text-sm font-medium mt-2">
           {{
             new Date(relatedPost.createdAt).toLocaleDateString('en-US', {
