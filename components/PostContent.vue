@@ -1,15 +1,9 @@
 <template>
   <div class="post--content__container">
-    <post-header
-      :post="post"
-      class="2xl:w-5/6 xl:w-4/5 w-11/12 mr-auto ml-auto"
-    />
+    <post-header :post="post" class="responsive--post" />
     <cover :post="post" />
-    <post-text
-      :post="post"
-      class="2xl:w-5/6 xl:w-4/5 w-11/12 mr-auto ml-auto"
-    />
-    <related-posts :post="post" />
+    <post-text :post="post" class="responsive--post" />
+    <related-posts :post="post" class="responsive--post" />
   </div>
 </template>
 
@@ -30,3 +24,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.responsive--post {
+  @apply 2xl:w-5/6 xl:w-4/5 w-11/12 mr-auto ml-auto;
+}
+</style>
