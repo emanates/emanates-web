@@ -1,7 +1,11 @@
 <template>
   <div class="related--posts__container border">
     <div class="related--posts__content">
-      <related-post />
+      <related-post
+        v-for="(value, id) in related"
+        :key="id"
+        :related-post="value"
+      />
     </div>
   </div>
 </template>
