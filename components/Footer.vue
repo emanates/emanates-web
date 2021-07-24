@@ -9,12 +9,26 @@
         ml-auto
         items-center
         py-6
-        flex flex-wrap
-        justify-between
+        flex flex-wrap-reverse
+        md:justify-between
+        justify-center
       "
     >
-      <div class="powered-by md:w-1/2 w-full text-2xl">
-        <span class="text-gray-600 text-sm">Powered by</span>
+      <div
+        class="
+          powered-by
+          md:w-1/2
+          w-full
+          text-2xl
+          md:text-left
+          text-center
+          md:mt-0
+          mt-4
+        "
+      >
+        <span class="text-gray-600 text-sm md:inline-block block"
+          >Powered by</span
+        >
         <a
           href="https://emanat.es"
           class="text-black dark:text-white font-semibold"
@@ -23,18 +37,10 @@
           >Emanates</a
         >
       </div>
-      <div class="links text-right">
+      <div class="links text-center">
         <a
           href="https://github.com/emanates/emanates-web"
-          class="
-            github
-            flex
-            items-center
-            text-gray-700
-            dark:text-gray-300
-            md:mt-0
-            mt-6
-          "
+          class="github flex items-center text-gray-700 dark:text-gray-300"
           target="_blank"
           rel="noopener noreferrer"
         >
