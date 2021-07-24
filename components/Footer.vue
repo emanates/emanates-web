@@ -3,66 +3,58 @@
     <div
       class="
         footer--content
-        md:w-3/4
+        md:w-5/6
         w-11/12
         mr-auto
         ml-auto
+        items-center
         py-6
         flex flex-wrap
-        text-gray-500
-        justify-center
+        justify-between
       "
     >
-      <div class="powered-by md:w-auto w-full text-center">
-        Powered by
+      <div class="powered-by md:w-1/2 w-full text-2xl">
+        <span class="text-gray-600 text-sm">Powered by</span>
         <a
           href="https://emanat.es"
-          class="text-gray-700 dark:text-gray-300 font-semibold"
+          class="text-black dark:text-white font-semibold"
           target="_blank"
           rel="noopener noreferrer"
           >Emanates</a
         >
       </div>
-      <div
-        class="
-          separator
-          border-l border-gray-700
-          dark:border-gray-500
-          mx-8
-          md:block
-          hidden
-        "
-      ></div>
-      <a
-        href="https://github.com/emanates/emanates-web"
-        class="
-          github
-          flex
-          items-center
-          text-gray-700
-          dark:text-gray-300
-          md:mt-0
-          mt-6
-        "
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <p class="text">We're Open Source</p>
-        <client-only>
+      <div class="links text-right">
+        <a
+          href="https://github.com/emanates/emanates-web"
+          class="
+            github
+            flex
+            items-center
+            text-gray-700
+            dark:text-gray-300
+            md:mt-0
+            mt-6
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p class="text">We're Open Source</p>
           <client-only>
-            <unicon
-              name="github"
-              :fill="
-                $store.state.theme.currentExactTheme == 'dark'
-                  ? 'white'
-                  : 'black'
-              "
-              class="ml-3"
-              hover-fill="#34D399"
-            />
+            <client-only>
+              <unicon
+                name="github"
+                :fill="
+                  $store.state.theme.currentExactTheme == 'dark'
+                    ? 'white'
+                    : 'black'
+                "
+                class="ml-3"
+                hover-fill="#34D399"
+              />
+            </client-only>
           </client-only>
-        </client-only>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </template>
