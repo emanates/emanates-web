@@ -101,8 +101,57 @@ async function getRelatedPosts(labels, postToRemove) {
     return getReturnableRelated(response.data.repository.issues.nodes, postToRemove)
 }
 
+async function getPost(nodeId) {
+    /**
+     * Get the post by using the nodeId passed.
+     * 
+     * We will use GitHub's GraphQL API to fetch the posts.
+     */
+    const qlQuery = `query { node(id: "${nodeId}") {
+        ... on Issue {
+          title
+          author {login, url, avatarUrl}
+          body
+          createdAt
+          updatedAt
+          labels (first: 5) {
+            edges {
+              node {
+                name
+                color
+              }
+            }
+          }
+        }
+      } }`
+    const response = await fetch('https://api.github.com/graphql', {
+        method: 'POST',
+        headers: {
+            Authorization: `bearer ${token}`,
+            'Content-Type': 'appliction/json',
+        },
+        body: JSON.stringify({
+            query: qlQuery,
+        }),
+    }).then((response) => response.json())
+
+    // Check if error was thrown
+    // The node value will be null if the nodeId is invalid
+    if (response.data.node == null) {
+        /* eslint-disable no-console */
+        console.log('404 error')
+        return null
+    }
+
+    // Inject the nodeId into the response
+    response.data.node.id = nodeId
+
+    return response.data.node
+}
+
 export default ({ app }, inject) => {
     inject('getPosts', async () => await getPosts())
     inject('getRelatedPosts', async (labels, postToRemove) => await getRelatedPosts(labels, postToRemove))
+    inject('getPost', async nodeId => await this.getPost(nodeId))
 }
 
