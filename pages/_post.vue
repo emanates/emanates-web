@@ -1,6 +1,19 @@
 <template>
-  <div class="post 2xl:w-2/3 xl:w-3/4 lg:w-3/4 md:w-4/5 w-full mr-auto ml-auto">
-    <post-content :post="post" :related="related" />
+  <div class="post">
+    <div
+      class="
+        post--wrapper
+        2xl:w-2/3
+        xl:w-3/4
+        lg:w-3/4
+        md:w-4/5
+        w-full
+        mr-auto
+        ml-auto
+      "
+    >
+      <post-content :post="post" :related="related" />
+    </div>
   </div>
 </template>
 
