@@ -40,25 +40,27 @@
       <div class="links text-center">
         <a
           href="https://github.com/emanates/emanates-web"
-          class="github flex items-center text-gray-700 dark:text-gray-300"
+          class="github flex items-center text-gray-600 dark:text-gray-300"
           target="_blank"
           rel="noopener noreferrer"
         >
           <p class="text">We're Open Source</p>
-          <client-only>
+          <div class="github--icon--wrapper md:block hidden mt-1">
             <client-only>
-              <unicon
-                name="github"
-                :fill="
-                  $store.state.theme.currentExactTheme == 'dark'
-                    ? 'white'
-                    : 'black'
-                "
-                class="ml-3"
-                hover-fill="#34D399"
-              />
+              <client-only>
+                <unicon
+                  name="github"
+                  :fill="
+                    $store.state.theme.currentExactTheme == 'dark'
+                      ? 'white'
+                      : 'black'
+                  "
+                  class="ml-3"
+                  hover-fill="#34D399"
+                />
+              </client-only>
             </client-only>
-          </client-only>
+          </div>
         </a>
       </div>
     </div>
