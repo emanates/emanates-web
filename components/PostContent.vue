@@ -3,7 +3,10 @@
     <post-header :post="post" class="responsive--post" />
     <cover :post="post" />
     <post-text :post="post" class="responsive--post" />
-    <related-posts :post="post" class="md:w-full w-11/12 mr-auto ml-auto" />
+    <related-posts
+      :related="related"
+      class="md:w-full w-11/12 mr-auto ml-auto"
+    />
   </div>
 </template>
 
@@ -20,6 +23,11 @@ export default {
       type: Object,
       require: true,
       default: null,
+    },
+    related: {
+      type: Array,
+      default: null,
+      require: true,
     },
   },
 }

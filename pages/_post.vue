@@ -1,6 +1,6 @@
 <template>
   <div class="post">
-    <post-content :post="post" />
+    <post-content :post="post" :related="related" />
   </div>
 </template>
 

@@ -8,8 +8,8 @@
 export default {
   name: 'RelatedPosts',
   props: {
-    post: {
-      type: Object,
+    related: {
+      type: Array,
       default: null,
       require: true,
     },
