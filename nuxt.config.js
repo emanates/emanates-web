@@ -24,7 +24,8 @@ export default {
 
   plugins: [
     { src: '~/plugins/unicons', mode: 'client' },
-    '~/plugins/micromodal.client.js'
+    '~/plugins/micromodal.client.js',
+    '~/plugins/posts.js'
   ],
 
   components: true,
