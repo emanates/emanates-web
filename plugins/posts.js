@@ -72,7 +72,6 @@ async function getRelatedPosts(labels, postToRemove) {
                          id
                          title
                          createdAt
-                         updatedAt
                          author {
                              login
                              url

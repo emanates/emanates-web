@@ -1,18 +1,7 @@
 <template>
   <div class="dark:bg-darklow">
     <Navbar />
-    <div
-      class="
-        wrapper
-        2xl:w-2/3
-        xl:w-3/4
-        lg:w-3/4
-        md:w-4/5
-        w-full
-        mr-auto
-        ml-auto
-      "
-    >
+    <div class="wrapper">
       <Nuxt />
     </div>
     <Footer />
