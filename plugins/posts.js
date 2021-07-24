@@ -152,6 +152,6 @@ async function getPost(nodeId) {
 export default ({ app }, inject) => {
     inject('getPosts', async () => await getPosts())
     inject('getRelatedPosts', async (labels, postToRemove) => await getRelatedPosts(labels, postToRemove))
-    inject('getPost', async nodeId => await this.getPost(nodeId))
+    inject('getPost', async nodeId => await getPost(nodeId))
 }
 

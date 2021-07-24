@@ -8,7 +8,7 @@
 import PostContent from '~/components/PostContent.vue'
 export default {
   components: { PostContent },
-  async asyncData({ app, params, $getPost }) {
+  async asyncData({ app, $getPost, params }) {
     // Try to extract the issue nodeId
     const slug = params.post
     const nodeId = slug.split('-').slice(-1)[0]
