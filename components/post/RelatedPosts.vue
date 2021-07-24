@@ -1,7 +1,7 @@
 <template>
-  <div class="related--posts__container">
-    <h1 class="text-3xl font-bold mt-3 mb-6">Posts you might like</h1>
-    <div class="related--posts__content flex justify-around flex-wrap">
+  <div class="related--posts__container pb-12">
+    <h1 class="text-2xl font-semibold mt-3 mb-3">Posts you might like</h1>
+    <div class="related--posts__content flex justify-around flex-wrap border-t">
       <related-post
         v-for="(value, id) in related"
         :key="id"

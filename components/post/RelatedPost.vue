@@ -1,16 +1,16 @@
 <template>
   <div class="related--post__container">
-    <div class="related--post--content flex p-4">
+    <div class="related--post--content flex py-4">
       <div class="author text-center w-1/6">
         <img
           :src="relatedPost.author.avatarUrl"
-          width="40"
+          width="45"
           alt="Author Avatar"
           class="rounded-full"
         />
       </div>
       <div class="post--details w-5/6">
-        <h1 class="text-xl font-semibold">{{ relatedPost.title }}</h1>
+        <h1 class="text-lg font-medium">{{ relatedPost.title }}</h1>
         <p class="text-gray-600 text-sm font-medium mt-2">
           {{
             new Date(relatedPost.createdAt).toLocaleDateString('en-US', {
