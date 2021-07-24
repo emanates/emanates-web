@@ -3,31 +3,21 @@
     <post-header :post="post" class="responsive--post" />
     <cover :post="post" />
     <post-text :post="post" class="responsive--post" />
-    <related-posts
-      :related="related"
-      class="md:w-full w-11/12 mr-auto ml-auto"
-    />
   </div>
 </template>
 
 <script>
 import Cover from './post/Cover.vue'
 import PostText from './post/PostText.vue'
-import RelatedPosts from './post/RelatedPosts.vue'
 const { default: PostHeader } = require('./post/PostHeader.vue')
 
 export default {
-  components: { PostHeader, PostText, Cover, RelatedPosts },
+  components: { PostHeader, PostText, Cover },
   props: {
     post: {
       type: Object,
       require: true,
       default: null,
-    },
-    related: {
-      type: Array,
-      default: null,
-      require: true,
     },
   },
 }

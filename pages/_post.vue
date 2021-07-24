@@ -12,15 +12,17 @@
         ml-auto
       "
     >
-      <post-content :post="post" :related="related" />
+      <post-content :post="post" />
     </div>
+    <related-posts :related="related" />
   </div>
 </template>
 
 <script>
+import RelatedPosts from '~/components/post/RelatedPosts.vue'
 import PostContent from '~/components/PostContent.vue'
 export default {
-  components: { PostContent },
+  components: { PostContent, RelatedPosts },
   async asyncData({ app, $getPost, params, $getRelatedPosts }) {
     // Try to extract the issue nodeId
     const slug = params.post
