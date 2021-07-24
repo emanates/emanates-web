@@ -1,10 +1,11 @@
 <template>
   <div class="related--posts__container border">
-    <div class="related--posts__content">
+    <div class="related--posts__content flex justify-around flex-wrap">
       <related-post
         v-for="(value, id) in related"
         :key="id"
         :related-post="value"
+        class="w-1/3"
       />
     </div>
   </div>
