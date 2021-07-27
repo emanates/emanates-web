@@ -1,5 +1,5 @@
 <template>
-  <div class="post--header__container py-12 text-lg">
+  <div class="post--header__container py-12 md:text-lg text-base">
     <Label :label="post.labels.edges[0].node" />
     <h1
       class="
@@ -18,20 +18,22 @@
     >
       {{ post.title }}
     </h1>
-    <div class="date flex font-medium dark:text-gray-300">
-      <p class="created--at">
-        {{
-          new Date(post.createdAt).toLocaleDateString('en-US', {
-            dateStyle: 'medium',
-          })
-        }}
-      </p>
-      <div class="separator mx-2">&bull;</div>
-      <p>
-        <span class="text-gray-500">Updated</span> {{ getRelativeUpdatedAt }}
-      </p>
-      <div class="separator mx-2">&bull;</div>
-      <div class="share--content">
+    <div class="date md:flex font-medium dark:text-gray-300">
+      <div class="time-details flex">
+        <p class="created--at">
+          {{
+            new Date(post.createdAt).toLocaleDateString('en-US', {
+              dateStyle: 'medium',
+            })
+          }}
+        </p>
+        <div class="separator mx-2">&bull;</div>
+        <p>
+          <span class="text-gray-500">Updated</span> {{ getRelativeUpdatedAt }}
+        </p>
+      </div>
+      <div class="separator mx-2 md:block hidden">&bull;</div>
+      <div class="share--content md:mt-0 mt-2">
         <share :post="post" />
       </div>
     </div>
