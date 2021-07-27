@@ -1,7 +1,7 @@
 <template>
   <div class="related--post__container">
     <div class="related--post--content flex py-4">
-      <div class="author text-center w-1/6">
+      <div class="author text-center 2xl:w-1/12 2xl:mr-3 mr-0 w-1/6">
         <img
           :src="relatedPost.author.avatarUrl"
           width="45"
