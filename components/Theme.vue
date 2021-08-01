@@ -24,6 +24,7 @@
             absolute
             top-0
             md:left-0
+            md:right-auto
             right-0
             rounded-md
             border
