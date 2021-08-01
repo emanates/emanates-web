@@ -15,7 +15,7 @@
   >
     <div class="wrapper block">
       <div class="top--generic--content dark:text-white">
-        <h1 class="text-4xl font-bold">
+        <h1 class="md:text-4xl text-3xl font-bold">
           Uh Oh! Seems like you're at the wrong place.
         </h1>
         <p class="mt-3 text-lg font-medium text-gray-700 dark:text-gray-400">
