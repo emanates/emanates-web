@@ -28,7 +28,7 @@ import RelatedPosts from '~/components/post/RelatedPosts.vue'
 import PostContent from '~/components/PostContent.vue'
 export default {
   components: { PostContent, RelatedPosts },
-  async asyncData({ app, $getPost, params, $getRelatedPosts }) {
+  async asyncData({ app, $getPost, params, $getRelatedPosts, error }) {
     // Try to extract the issue nodeId
     const slug = params.post
     const nodeId = slug.split('-').slice(-1)[0]
@@ -39,6 +39,8 @@ export default {
     if (!nodeId) return console.log('Error with slug')
 
     const post = await $getPost(nodeId)
+
+    if (!post) return error({ statusCode: 404, message: 'Post Not Found' })
 
     // Once the post is fetched, fetch it's related posts
     // using the nodeId and the labels

@@ -95,7 +95,7 @@ async function getRelatedPosts(labels, postToRemove) {
 
     // Check if error was thrown
     // The node value will be null if the nodeId is invalid
-    if (response.data.repository.issues.nodes == null) return console.log('404 error')
+    if (response.data.repository.issues.nodes == null) return null
 
     return getReturnableRelated(response.data.repository.issues.nodes, postToRemove)
 }
@@ -137,8 +137,6 @@ async function getPost(nodeId) {
     // Check if error was thrown
     // The node value will be null if the nodeId is invalid
     if (response.data.node == null) {
-        /* eslint-disable no-console */
-        console.log('404 error')
         return null
     }
 
