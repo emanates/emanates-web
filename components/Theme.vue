@@ -23,7 +23,8 @@
             theme--options
             absolute
             top-0
-            left-0
+            md:left-0
+            right-0
             rounded-md
             border
             dark:border-gray-800
@@ -34,7 +35,8 @@
             px-5
             text-gray-600
             dark:text-gray-400
-            origin-top-left
+            md:origin-top-left
+            origin-top-right
           "
         >
           <div class="options">
