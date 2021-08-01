@@ -18,18 +18,24 @@
         <h1 class="text-4xl font-bold">
           Uh Oh! Seems like you're at the wrong place.
         </h1>
-        <p class="mt-3 text-lg font-medium text-gray-800">
+        <p class="mt-3 text-lg font-medium text-gray-700">
           We tried our best but couldn't find the page you're looking for!
         </p>
       </div>
-      <div v-if="error" class="error--details mt-12 flex text-lg">
+      <div v-if="error" class="error--details mt-12 flex text-lg font-semibold">
         <p>{{ error.statusCode }}</p>
-        <span class="border-l-2 border-gray-500 mx-4"></span>
+        <span class="border-l-2 border-gray-500 mx-3"></span>
         <p>{{ error.message }}</p>
       </div>
       <div class="extra--message mt-8 text-gray-700">
         > If you think this is an error on our side,
-        <a href="">you can raise an issue on Emanates</a>!
+        <a
+          href="https://github.com/emanates/emanates-web/issues/new"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="text-gray-900 font-medium underline"
+          >you can raise an issue on Emanates</a
+        >!
       </div>
     </div>
   </div>
