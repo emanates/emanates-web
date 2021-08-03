@@ -47,7 +47,92 @@ export default {
     const labelNames = post.labels.edges.map((label) => label.node.name)
     const relatedPosts = await $getRelatedPosts(labelNames, nodeId)
 
-    return { post, related: relatedPosts }
+    return { post, related: relatedPosts, slug, labelNames }
+  },
+  head() {
+    return {
+      title: `${this.post.title} | `,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+        { name: 'robots', content: 'index,follow' },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.labelNames.join(','),
+        },
+        // Itemprop
+        {
+          hid: 'itemprop-name',
+          itemprop: 'name',
+          content: this.post.title,
+        },
+        {
+          hid: 'itemprop-description',
+          itemprop: 'description',
+          content: '',
+        },
+        // Twitter stuff
+        {
+          hid: 'twitter-card',
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          hid: 'twitter-title',
+          name: 'twitter:title',
+          content: this.post.title,
+        },
+        {
+          hid: 'twitter-desc',
+          name: 'twitter:description',
+          content: '',
+        },
+        {
+          hid: 'twitter-url',
+          name: 'twitter:url',
+          content: `https://blog.deepjyoti30.dev/${this.slug}`,
+        },
+        {
+          hid: 'twitter-img',
+          name: 'twitter:image',
+          content: 'https://blog.deepjyoti30.dev/icon.png',
+        },
+        // Facebook
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.post.title,
+        },
+        {
+          hid: 'fb-url',
+          property: 'og:url',
+          content: `https://blog.deepjyoti30.dev/${this.slug}`,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: '',
+        },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'Blog | Deepjyoti Barman',
+        },
+        {
+          hid: 'fb-img',
+          property: 'og:image',
+          content: 'https://blog.deepjyoti30.dev/icon.png',
+        },
+        { hid: 'fb-img-type', property: 'og:image:type', content: 'image/png' },
+        { hid: 'fb-img-width', property: 'og:image:width', content: '512' },
+        { hid: 'fb-img-height', property: 'og:image:height', content: '512' },
+      ],
+    }
   },
 }
 </script>
