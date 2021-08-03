@@ -74,7 +74,7 @@ export default {
       { hid: 'fb-img-height', property: "og:image:height", content: "512" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: config.favicon_url }
     ]
   },
 
