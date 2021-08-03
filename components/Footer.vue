@@ -15,19 +15,9 @@
       "
     >
       <div
-        class="
-          powered-by
-          md:w-1/2
-          w-full
-          text-2xl
-          md:text-left
-          text-center
-          md:mt-0
-          mt-4
-        "
+        class="powered-by md:w-1/2 w-full md:text-left text-center md:mt-0 mt-4"
       >
-        <span
-          class="text-gray-600 dark:text-gray-400 text-sm md:inline-block block"
+        <span class="text-gray-600 dark:text-gray-400 md:inline-block block"
           >Powered by</span
         >
         <a
