@@ -26,8 +26,7 @@
 <script>
 import RelatedPosts from '~/components/post/RelatedPosts.vue'
 import PostContent from '~/components/PostContent.vue'
-
-const config = require('~/.emanates.js')
+import config from '~/.emanates.js'
 
 export default {
   components: { PostContent, RelatedPosts },
