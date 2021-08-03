@@ -1,13 +1,77 @@
+import config from "./.emanates.js"
+
 export default {
   target: 'static',
 
   head: {
-    title: 'emanates-web',
+    title: config.seo.site_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: config.seo.site_description },
+      { name: "robots", content: "index,follow" },
+      { hid: 'keywords', name: "keywords", content: config.seo.site_keywords },
+      // Itemprop
+      {
+        hid: 'itemprop-name',
+        itemprop: "name",
+        content: config.seo.site_name
+      },
+      {
+        hid: 'itemprop-description',
+        itemprop: "description",
+        content: config.seo.site_description
+      },
+      // Twitter stuff
+      { hid: 'twitter-card', name: "twitter:card", content: "summary" },
+      {
+        hid: 'twitter-title',
+        name: "twitter:title",
+        content: config.seo.site_name
+      },
+      {
+        hid: 'twitter-desc',
+        name: "twitter:description",
+        content: config.seo.site_description
+      },
+      { hid: 'twitter-url', name: "twitter:url", content: config.seo.base_url },
+      { hid: 'twitter-creator', name: "twitter:creator", content: config.seo.twitter_username },
+      {
+        hid: 'twitter-img',
+        name: "twitter:image",
+        content: config.seo.logo
+      },
+      {
+        hid: 'twitter-site',
+        name: "twitter:site",
+        content: "@DeepBarman30"
+      },
+      // Facebook
+      { hid: 'og:type', property: "og:type", content: "website" },
+      {
+        hid: 'og:title',
+        property: "og:title",
+        content: config.seo.site_name
+      },
+      { hid: 'fb-url', property: "og:url", content: config.seo.base_url },
+      {
+        hid: 'og:description',
+        property: "og:description",
+        content: config.seo.site_description
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: config.seo.site_name
+      },
+      {
+        hid: 'fb-img',
+        property: "og:image",
+        content: config.seo.logo
+      },
+      { hid: 'fb-img-type', property: "og:image:type", content: "image/png" },
+      { hid: 'fb-img-width', property: "og:image:width", content: "512" },
+      { hid: 'fb-img-height', property: "og:image:height", content: "512" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -25,7 +89,7 @@ export default {
   plugins: [
     { src: '~/plugins/unicons', mode: 'client' },
     '~/plugins/micromodal.client.js',
-    '~/plugins/posts.js'
+    '~/plugins/posts.js',
   ],
 
   components: true,
