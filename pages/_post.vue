@@ -26,6 +26,7 @@
 <script>
 import RelatedPosts from '~/components/post/RelatedPosts.vue'
 import PostContent from '~/components/PostContent.vue'
+
 export default {
   components: { PostContent, RelatedPosts },
   async asyncData({ app, $getPost, params, $getRelatedPosts, error }) {
@@ -50,13 +51,14 @@ export default {
     return { post, related: relatedPosts, slug, labelNames }
   },
   head() {
+    const config = this.config()
     return {
       title: `${this.post.title} | `,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: '',
+          content: config.seo.site_description,
         },
         { name: 'robots', content: 'index,follow' },
         {
@@ -73,7 +75,7 @@ export default {
         {
           hid: 'itemprop-description',
           itemprop: 'description',
-          content: '',
+          content: config.seo.site_description,
         },
         // Twitter stuff
         {
@@ -89,7 +91,7 @@ export default {
         {
           hid: 'twitter-desc',
           name: 'twitter:description',
-          content: '',
+          content: config.seo.site_description,
         },
         {
           hid: 'twitter-url',
@@ -99,7 +101,7 @@ export default {
         {
           hid: 'twitter-img',
           name: 'twitter:image',
-          content: 'https://blog.deepjyoti30.dev/icon.png',
+          content: config.seo.logo,
         },
         // Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -116,17 +118,17 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: '',
+          content: config.seo.site_description,
         },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
-          content: 'Blog | Deepjyoti Barman',
+          content: config.seo.site_name,
         },
         {
           hid: 'fb-img',
           property: 'og:image',
-          content: 'https://blog.deepjyoti30.dev/icon.png',
+          content: config.seo.logo,
         },
         { hid: 'fb-img-type', property: 'og:image:type', content: 'image/png' },
         { hid: 'fb-img-width', property: 'og:image:width', content: '512' },

@@ -29,4 +29,6 @@ catch (err) {
 // Finally ready the config to export
 const config = internalConfig;
 
-export default config;
+export default ({ app }, inject) => {
+    inject('config', () => config)
+}
