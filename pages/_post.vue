@@ -27,6 +27,8 @@
 import RelatedPosts from '~/components/post/RelatedPosts.vue'
 import PostContent from '~/components/PostContent.vue'
 
+const config = require('~/.emanates.js')
+
 export default {
   components: { PostContent, RelatedPosts },
   async asyncData({ app, $getPost, params, $getRelatedPosts, error }) {
@@ -51,7 +53,6 @@ export default {
     return { post, related: relatedPosts, slug, labelNames }
   },
   head() {
-    const config = this.config()
     return {
       title: `${this.post.title} | `,
       meta: [
@@ -96,7 +97,7 @@ export default {
         {
           hid: 'twitter-url',
           name: 'twitter:url',
-          content: `https://blog.deepjyoti30.dev/${this.slug}`,
+          content: `${config.seo.base_url}/${this.slug}`,
         },
         {
           hid: 'twitter-img',
@@ -113,7 +114,7 @@ export default {
         {
           hid: 'fb-url',
           property: 'og:url',
-          content: `https://blog.deepjyoti30.dev/${this.slug}`,
+          content: `${config.seo.base_url}/${this.slug}`,
         },
         {
           hid: 'og:description',

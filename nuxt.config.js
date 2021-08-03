@@ -26,7 +26,6 @@ export default {
     { src: '~/plugins/unicons', mode: 'client' },
     '~/plugins/micromodal.client.js',
     '~/plugins/posts.js',
-    { src: '~/plugins/readConfig.js', mode: 'server' }
   ],
 
   components: true,

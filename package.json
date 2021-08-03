@@ -22,8 +22,7 @@
     "moment": "^2.29.1",
     "nuxt": "^2.15.7",
     "prismjs": "^1.24.1",
-    "vue-unicons": "^3.2.1",
-    "yawn-yaml": "^1.5.0"
+    "vue-unicons": "^3.2.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
