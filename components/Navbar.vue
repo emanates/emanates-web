@@ -25,9 +25,9 @@
         "
       >
         <div class="brand">
-          <router-link to="/" class="font-bold md:text-lg text-xl"
-            >Blog</router-link
-          >
+          <router-link to="/" class="font-bold md:text-lg text-xl">{{
+            getBlogName
+          }}</router-link>
           <a
             href="https://github.com/emanates/emanates-web"
             rel="noopener noreferer"
@@ -63,8 +63,14 @@
 
 <script>
 import Theme from './Theme.vue'
+import config from '~/.emanates.js'
 export default {
   components: { Theme },
+  computed: {
+    getBlogName() {
+      return config.name
+    },
+  },
 }
 </script>
 

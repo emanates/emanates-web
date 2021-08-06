@@ -7,5 +7,6 @@ module.exports = {
         base_url: "https://emanates.deepjyoti30.dev",
         logo: "https://deepjyoti30.dev/img/icons/favicon-32x32.png"
     },
-    favicon_url: "https://deepjyoti30.dev/img/icons/favicon-16x16.png"
+    favicon_url: "https://deepjyoti30.dev/img/icons/favicon-16x16.png",
+    name: "Emanates Blog"
 }
