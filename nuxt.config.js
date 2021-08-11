@@ -90,6 +90,7 @@ export default {
     { src: '~/plugins/unicons', mode: 'client' },
     '~/plugins/micromodal.client.js',
     '~/plugins/posts.js',
+    '~/plugins/meta.js'
   ],
 
   components: true,
