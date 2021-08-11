@@ -44,7 +44,7 @@ export default {
       {
         hid: 'twitter-site',
         name: "twitter:site",
-        content: "@DeepBarman30"
+        content: config.seo.twitter_username
       },
       // Facebook
       { hid: 'og:type', property: "og:type", content: "website" },
