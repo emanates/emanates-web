@@ -56,13 +56,12 @@
 
 <script>
 import { post } from '@/mixins/post'
-import { meta } from '@/mixins/meta'
 import Label from './Label.vue'
 
 export default {
   name: 'PostEach',
   components: { Label },
-  mixins: [post, meta],
+  mixins: [post],
   props: {
     post: {
       type: Object,
@@ -91,7 +90,7 @@ export default {
        * The description will be the first line in the markdown content that starts
        * with [//].
        */
-      const matches = this.findMetaFromComments(markdownContent)
+      const matches = this.$findMetaFromComments(markdownContent)
 
       return matches ? matches[0] : null
     },

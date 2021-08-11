@@ -5,11 +5,8 @@
 </template>
 
 <script>
-import { meta } from '@/mixins/meta'
-
 export default {
   name: 'Cover',
-  mixins: [meta],
   props: {
     post: {
       type: Object,
@@ -30,7 +27,7 @@ export default {
       /**
        * Extract the post cover from the posts body.
        */
-      const meta = this.findMetaFromComments(this.post.body)
+      const meta = this.$findMetaFromComments(this.post.body)
 
       // Check if cover is present
       if (meta != null && meta.length >= 2) this.cover = meta[1]
