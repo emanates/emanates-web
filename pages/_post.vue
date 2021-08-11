@@ -12,7 +12,7 @@
         ml-auto
       "
     >
-      <post-content :post="post" />
+      <post-content :post="post" :cover="cover" />
     </div>
     <div class="related--wrapper">
       <related-posts

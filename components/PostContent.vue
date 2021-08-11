@@ -1,7 +1,7 @@
 <template>
   <div class="post--content__container">
     <post-header :post="post" class="responsive--post" />
-    <cover :post="post" />
+    <cover :cover="cover" />
     <post-text :post="post" class="responsive--post" />
   </div>
 </template>
@@ -16,8 +16,13 @@ export default {
   props: {
     post: {
       type: Object,
-      require: true,
+      required: true,
       default: null,
+    },
+    cover: {
+      type: String,
+      default: null,
+      required: true,
     },
   },
 }
