@@ -30,7 +30,14 @@ import config from '~/.emanates.js'
 
 export default {
   components: { PostContent, RelatedPosts },
-  async asyncData({ app, $getPost, params, $getRelatedPosts, error }) {
+  async asyncData({
+    app,
+    $getPost,
+    params,
+    $getRelatedPosts,
+    $findMetaFromComments,
+    error,
+  }) {
     // Try to extract the issue nodeId
     const slug = params.post
     const nodeId = slug.split('-').slice(-1)[0]
@@ -49,7 +56,17 @@ export default {
     const labelNames = post.labels.edges.map((label) => label.node.name)
     const relatedPosts = await $getRelatedPosts(labelNames, nodeId)
 
-    return { post, related: relatedPosts, slug, labelNames }
+    // Try to extract the metadata and accordingly the description and
+    // the cover of the post.
+    const meta = $findMetaFromComments(post.body)
+    let description, cover
+
+    if (meta) {
+      description = meta[0]
+      cover = meta[1]
+    }
+
+    return { post, related: relatedPosts, slug, labelNames, cover, description }
   },
   head() {
     return {
