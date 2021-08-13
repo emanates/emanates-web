@@ -16,5 +16,7 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "vue/script-setup-uses-vars": "off"
+  }
 }
