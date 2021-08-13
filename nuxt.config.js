@@ -1,6 +1,6 @@
 import config from "./.emanates.js"
 
-export default {
+const settings = {
   target: 'static',
 
   head: {
@@ -124,3 +124,5 @@ export default {
     host: '0.0.0.0'
   },
 }
+
+export default settings;
