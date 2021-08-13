@@ -125,4 +125,13 @@ const settings = {
   },
 }
 
+// Check if analytics can be added
+if (config.googleAnalytics) {
+  // Add the module as a build module
+  settings.buildModules.push("@nuxtjs/google-analytics")
+
+  // Add the ID
+  settings.googleAnalytics = config.googleAnalytics
+}
+
 export default settings;
