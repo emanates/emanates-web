@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="commentsRepo"
     class="
       md:w-full
       w-11/12
@@ -34,7 +35,7 @@
     <div class="comments--content mt-8">
       <script
         src="https://utteranc.es/client.js"
-        repo="deepjyoti30/blog-comments"
+        :repo="commentsRepo"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
@@ -45,7 +46,16 @@
 </template>
 
 <script>
-export default {}
+import config from '~/.emanates.js'
+
+export default {
+  name: 'Comments',
+  computed: {
+    commentsRepo() {
+      return config.commentsRepo
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
