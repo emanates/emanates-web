@@ -8,5 +8,6 @@ module.exports = {
         logo: "https://deepjyoti30.dev/img/icons/favicon-32x32.png"
     },
     favicon_url: "https://deepjyoti30.dev/img/icons/favicon-16x16.png",
-    name: "Emanates Blog"
+    name: "Emanates Blog",
+    googleAnalytics: null
 }

@@ -1,6 +1,6 @@
 import config from "./.emanates.js"
 
-export default {
+const settings = {
   target: 'static',
 
   head: {
@@ -124,3 +124,14 @@ export default {
     host: '0.0.0.0'
   },
 }
+
+// Check if analytics can be added
+if (config.googleAnalytics) {
+  // Add the module as a build module
+  settings.buildModules.push("@nuxtjs/google-analytics")
+
+  // Add the ID
+  settings.googleAnalytics = config.googleAnalytics
+}
+
+export default settings;
