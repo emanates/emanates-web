@@ -9,9 +9,9 @@ export default {
   name: 'Cover',
   props: {
     cover: {
-      type: String,
       required: true,
       default: null,
+      validator: (item) => typeof item === 'string' || item == null,
     },
   },
 }

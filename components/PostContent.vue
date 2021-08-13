@@ -20,9 +20,9 @@ export default {
       default: null,
     },
     cover: {
-      type: String,
       default: null,
       required: true,
+      validator: (item) => typeof item === 'string' || item == null,
     },
   },
 }
