@@ -1,17 +1,36 @@
 <template>
-  <div class="comments__container mt-18 md:mb-18 mb-14">
-    <h4
-      class="
-        text-2xl text-gray-700
-        dark:text-gray-400
-        md:ml-0
-        ml-2
-        font-semibold
-        text-center
-      "
-    >
-      Comments
-    </h4>
+  <div
+    class="
+      md:w-full
+      w-11/12
+      mr-auto
+      ml-auto
+      comments__container
+      mt-18
+      md:mb-18
+      mb-14
+    "
+  >
+    <div class="top--text border-t border-grey-16 w-full relative">
+      <div
+        class="
+          text--content
+          inline-block
+          absolute
+          mr-auto
+          ml-auto
+          left-0
+          right-0
+          text-13
+          bg-white
+          text-grey-47
+        "
+      >
+        <div class="wrapper text-center text-xl font-semibold text-gray-700">
+          Comments
+        </div>
+      </div>
+    </div>
     <div class="comments--content mt-8">
       <script
         src="https://utteranc.es/client.js"
@@ -28,3 +47,14 @@
 <script>
 export default {}
 </script>
+
+<style lang="scss" scoped>
+.comments__container {
+  .top--text {
+    .text--content {
+      width: 127px;
+      top: -15px;
+    }
+  }
+}
+</style>
