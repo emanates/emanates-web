@@ -12,7 +12,7 @@
         ml-auto
       "
     >
-      <post-content :post="post" />
+      <post-content :post="post" :cover="cover" />
     </div>
     <div class="related--wrapper">
       <related-posts
@@ -30,7 +30,14 @@ import config from '~/.emanates.js'
 
 export default {
   components: { PostContent, RelatedPosts },
-  async asyncData({ app, $getPost, params, $getRelatedPosts, error }) {
+  async asyncData({
+    app,
+    $getPost,
+    params,
+    $getRelatedPosts,
+    $findMetaFromComments,
+    error,
+  }) {
     // Try to extract the issue nodeId
     const slug = params.post
     const nodeId = slug.split('-').slice(-1)[0]
@@ -49,16 +56,28 @@ export default {
     const labelNames = post.labels.edges.map((label) => label.node.name)
     const relatedPosts = await $getRelatedPosts(labelNames, nodeId)
 
-    return { post, related: relatedPosts, slug, labelNames }
+    // Try to extract the metadata and accordingly the description and
+    // the cover of the post.
+    const meta = $findMetaFromComments(post.body)
+    let description, cover
+
+    if (meta) {
+      description = meta[0]
+      cover = meta[1]
+    }
+
+    return { post, related: relatedPosts, slug, labelNames, cover, description }
   },
   head() {
     return {
-      title: `${this.post.title} | `,
+      title: `${this.post.title} | ${config.seo.site_name}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: config.seo.site_description,
+          content: this.description
+            ? this.description
+            : config.seo.site_description,
         },
         { name: 'robots', content: 'index,follow' },
         {
@@ -70,28 +89,32 @@ export default {
         {
           hid: 'itemprop-name',
           itemprop: 'name',
-          content: this.post.title,
+          content: `${this.post.title} | ${config.seo.site_name}`,
         },
         {
           hid: 'itemprop-description',
           itemprop: 'description',
-          content: config.seo.site_description,
+          content: this.description
+            ? this.description
+            : config.seo.site_description,
         },
         // Twitter stuff
         {
           hid: 'twitter-card',
           name: 'twitter:card',
-          content: 'summary',
+          content: this.cover ? 'summary_large_image' : 'summary',
         },
         {
           hid: 'twitter-title',
           name: 'twitter:title',
-          content: this.post.title,
+          content: `${this.post.title} | ${config.seo.site_name}`,
         },
         {
           hid: 'twitter-desc',
           name: 'twitter:description',
-          content: config.seo.site_description,
+          content: this.description
+            ? this.description
+            : config.seo.site_description,
         },
         {
           hid: 'twitter-url',
@@ -101,14 +124,14 @@ export default {
         {
           hid: 'twitter-img',
           name: 'twitter:image',
-          content: config.seo.logo,
+          content: this.cover ? this.cover : config.seo.logo,
         },
         // Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.post.title,
+          content: `${this.post.title} | ${config.seo.site_name}`,
         },
         {
           hid: 'fb-url',
@@ -118,7 +141,9 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: config.seo.site_description,
+          content: this.description
+            ? this.description
+            : config.seo.site_description,
         },
         {
           hid: 'og:site_name',
@@ -128,7 +153,7 @@ export default {
         {
           hid: 'fb-img',
           property: 'og:image',
-          content: config.seo.logo,
+          content: this.cover ? this.cover : config.seo.logo,
         },
         { hid: 'fb-img-type', property: 'og:image:type', content: 'image/png' },
         { hid: 'fb-img-width', property: 'og:image:width', content: '512' },
