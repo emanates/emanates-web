@@ -10,5 +10,5 @@ module.exports = {
     favicon_url: "https://deepjyoti30.dev/img/icons/favicon-16x16.png",
     name: "Emanates Blog",
     googleAnalytics: null,
-    commentsRepo: null
+    commentsRepo: "deepjyoti30/blog-comments"
 }

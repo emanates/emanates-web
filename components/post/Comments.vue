@@ -37,7 +37,7 @@
         src="https://utteranc.es/client.js"
         :repo="commentsRepo"
         issue-term="pathname"
-        theme="github-light"
+        :theme="getTheme"
         crossorigin="anonymous"
         async
       ></script>
@@ -50,9 +50,24 @@ import config from '~/.emanates.js'
 
 export default {
   name: 'Comments',
+  data() {
+    return {
+      themeMap: {
+        auto: 'preferred-color-scheme',
+        dark: 'github-dark',
+        light: 'github-light',
+      },
+    }
+  },
   computed: {
     commentsRepo() {
       return config.commentsRepo
+    },
+    getTheme() {
+      const appTheme = this.$store.state.theme.currentExactTheme
+      return Object.keys(this.themeMap).includes(appTheme)
+        ? this.themeMap[appTheme]
+        : 'github-light'
     },
   },
 }
