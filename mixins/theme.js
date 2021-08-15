@@ -1,7 +1,8 @@
 import { utils } from "@/mixins/utils";
+import { utterances } from "@/mixins/utterances";
 
 export const theme = {
-    mixins: [utils],
+    mixins: [utils, utterances],
     data() {
         return {
             themeKey: "preferred-theme",
@@ -91,6 +92,9 @@ export const theme = {
             }
 
             this.$store.commit("theme/setCurrentExactTheme", preferrance);
+
+            // Change utterance theme as well
+            this.changeUtteranceTheme();
         },
         restoreTheme() {
             /**

@@ -3,16 +3,18 @@
     <post-header :post="post" class="responsive--post" />
     <cover :cover="cover" />
     <post-text :post="post" class="responsive--post" />
+    <comments />
   </div>
 </template>
 
 <script>
+import Comments from './post/Comments.vue'
 import Cover from './post/Cover.vue'
 import PostText from './post/PostText.vue'
 const { default: PostHeader } = require('./post/PostHeader.vue')
 
 export default {
-  components: { PostHeader, PostText, Cover },
+  components: { PostHeader, PostText, Cover, Comments },
   props: {
     post: {
       type: Object,
