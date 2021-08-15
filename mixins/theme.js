@@ -42,9 +42,6 @@ export const theme = {
 
             // Now change the theme
             this.changeDeviceTheme(value);
-
-            // Change utterance theme as well
-            this.changeUtteranceTheme();
         },
         getTheme() {
             /**
@@ -95,6 +92,9 @@ export const theme = {
             }
 
             this.$store.commit("theme/setCurrentExactTheme", preferrance);
+
+            // Change utterance theme as well
+            this.changeUtteranceTheme();
         },
         restoreTheme() {
             /**
