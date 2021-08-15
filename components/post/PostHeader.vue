@@ -39,7 +39,7 @@
     </div>
     <div
       v-if="areTagsPresent"
-      class="tags pt-3 flex items-center text-gray-500 dark:text-gray-600"
+      class="tags pt-3 flex items-center text-gray-500 dark:text-gray-400"
     >
       <p v-for="(value, id) in getTags" :key="id" class="mr-2">
         #{{ value.node.name }}
