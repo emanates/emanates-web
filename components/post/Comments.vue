@@ -37,7 +37,7 @@
         src="https://utteranc.es/client.js"
         :repo="commentsRepo"
         issue-term="pathname"
-        :theme="getTheme"
+        theme="github-light"
         crossorigin="anonymous"
         async
       ></script>

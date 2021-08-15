@@ -2,7 +2,7 @@
  * Handle the utterances related settings etc.
  */
 
-const utterances = {
+export const utterances = {
     data() {
         return {
             themeMap: {
@@ -48,5 +48,3 @@ const utterances = {
 
     },
 }
-
-export default utterances;
