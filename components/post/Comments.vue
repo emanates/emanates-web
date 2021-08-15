@@ -12,7 +12,7 @@
       mb-14
     "
   >
-    <div class="top--text border-t border-grey-16 w-full relative">
+    <div class="top--text border-t dark:border-gray-700 w-full relative">
       <div
         class="
           text--content
@@ -24,10 +24,19 @@
           right-0
           text-13
           bg-white
+          dark:bg-darklow
           text-grey-47
         "
       >
-        <div class="wrapper text-center text-xl font-semibold text-gray-700">
+        <div
+          class="
+            wrapper
+            text-center text-xl
+            font-semibold
+            text-gray-700
+            dark:text-gray-300
+          "
+        >
           Comments
         </div>
       </div>
