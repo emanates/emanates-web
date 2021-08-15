@@ -1,7 +1,8 @@
 import { utils } from "@/mixins/utils";
+import { utterances } from "@/mixins/utterances";
 
 export const theme = {
-    mixins: [utils],
+    mixins: [utils, utterances],
     data() {
         return {
             themeKey: "preferred-theme",
@@ -41,6 +42,9 @@ export const theme = {
 
             // Now change the theme
             this.changeDeviceTheme(value);
+
+            // Change utterance theme as well
+            this.changeUtteranceTheme();
         },
         getTheme() {
             /**
