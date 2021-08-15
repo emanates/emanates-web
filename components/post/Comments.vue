@@ -25,7 +25,6 @@
           text-13
           bg-white
           dark:bg-darklow
-          text-grey-47
         "
       >
         <div
