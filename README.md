@@ -1,6 +1,7 @@
 <div align="center">
 <h1>Emanates</h1>
 <h4>Build a blog on top of GitHub Issues and Actions in just a matter of seconds. It supports comments, analytics, meta tags and all the ideal blog builder features.</h4>
+<h4><i><a href="https://emanates-demo.netlify.app">Check the live demo here</a></i></h4>
 </div>
 
 <div align="center">
