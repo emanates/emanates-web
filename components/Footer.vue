@@ -21,7 +21,7 @@
           >Powered by</span
         >
         <a
-          href="https://emanat.es"
+          href="https://emanates.deepjyoti30.dev"
           class="text-black dark:text-white font-semibold"
           target="_blank"
           rel="noopener noreferrer"
