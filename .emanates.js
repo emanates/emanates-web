@@ -5,9 +5,9 @@ module.exports = {
         site_keywords: "blog,emanates,built,emanates",
         twitter_username: "@Emanates",
         base_url: "https://emanates.deepjyoti30.dev",
-        logo: "https://deepjyoti30.dev/img/icons/favicon-32x32.png"
+        logo: "https://emanates.deepjyoti30.dev/img/logo.png"
     },
-    favicon_url: "https://deepjyoti30.dev/img/icons/favicon-16x16.png",
+    favicon_url: "https://emanates.deepjyoti30.dev/img/favicon.ico",
     name: "Emanates Blog",
     googleAnalytics: null,
     commentsRepo: null
