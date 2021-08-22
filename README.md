@@ -12,7 +12,7 @@
 
 <br/>
 
-![[Docs](https://img.shields.io/badge/Docs-Emanates-red.svg?style=for-the-badge)](https://emanates.deepjyoti30.dev) ![[RepoStatus](https://repostatus.deepjyoti30.dev)](https://apis.deepjyoti30.dev/repostatus/badge?repo=emanates%2Femanates-web&style=for-the-badge) [![License](https://img.shields.io/badge/License-MIT-pink.svg?style=for-the-badge)](LICENSE.md) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-lightblue.svg?style=for-the-badge)](http://makeapullrequest.com) [![Demo](https://img.shields.io/badge/Demo-Emanates-orange.svg?style=for-the-badge)](https://emanates-demo.netlify.app)
+[![Docs](https://img.shields.io/badge/Docs-Emanates-red.svg?style=for-the-badge)](https://emanates.deepjyoti30.dev) ![[RepoStatus](https://repostatus.deepjyoti30.dev)](https://apis.deepjyoti30.dev/repostatus/badge?repo=emanates%2Femanates-web&style=for-the-badge) [![License](https://img.shields.io/badge/License-MIT-pink.svg?style=for-the-badge)](LICENSE.md) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-lightblue.svg?style=for-the-badge)](http://makeapullrequest.com) [![Demo](https://img.shields.io/badge/Demo-Emanates-orange.svg?style=for-the-badge)](https://emanates-demo.netlify.app)
 
 <p>
 <a href="https://ko-fi.com/deepjyoti30"><img src="https://raw.githubusercontent.com/adi1090x/files/master/other/kofi.png" alt="Support me on ko-fi"></a>
