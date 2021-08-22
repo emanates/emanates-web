@@ -4,6 +4,11 @@
 </div>
 
 <div align="center">
+  <br>
+    <img src=".github/emanates-demo.png">
+</div>
+
+<div align="center">
 
 <br/>
 
