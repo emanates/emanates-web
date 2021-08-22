@@ -38,12 +38,12 @@ A flow of how Emanates works:
 
 ## Documentation
 
-1. [Getting Started](https://emanates.deepjyoti30.devdocs/getting-started)
-2. [Configuration](https://emanates.deepjyoti30.devdocs/configuration)
-3. [Deployment Options](https://emanates.deepjyoti30.devdocs/configuration)
-4. [Writing a post](https://emanates.deepjyoti30.devdocs/writing-a-post)
-5. [Analytics](https://emanates.deepjyoti30.devdocs/analytics)
-6. [Comments](https://emanates.deepjyoti30.devdocs/comments)
+1. [Getting Started](https://emanates.deepjyoti30.dev/docs/getting-started)
+2. [Configuration](https://emanates.deepjyoti30.dev/docs/configuration)
+3. [Deployment Options](https://emanates.deepjyoti30.dev/docs/configuration)
+4. [Writing a post](https://emanates.deepjyoti30.dev/docs/writing-a-post)
+5. [Analytics](https://emanates.deepjyoti30.dev/docs/analytics)
+6. [Comments](https://emanates.deepjyoti30.dev/docs/comments)
 
 Complete documentation is [available here](https://emanates.deepjyoti30.dev)
 
