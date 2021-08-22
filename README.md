@@ -16,6 +16,7 @@
 <div align="center">
 
 <br/>
+<br/>
 
 [![Docs](https://img.shields.io/badge/Docs-Emanates-red.svg?style=for-the-badge)](https://emanates.deepjyoti30.dev) ![[RepoStatus](https://repostatus.deepjyoti30.dev)](https://apis.deepjyoti30.dev/repostatus/badge?repo=emanates%2Femanates-web&style=for-the-badge) [![License](https://img.shields.io/badge/License-MIT-pink.svg?style=for-the-badge)](LICENSE.md) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-lightblue.svg?style=for-the-badge)](http://makeapullrequest.com) [![Demo](https://img.shields.io/badge/Demo-Emanates-orange.svg?style=for-the-badge)](https://emanates-demo.netlify.app)
 
@@ -25,7 +26,7 @@
 
 <br/>
 
-### \[[How it works](#how-it-works)] \[[Support the Project](#support-the-project)] \[[Documentation](#documentation)] \[[Demo](https://emanates-demo.netlify.app)]
+### \[[How it works](#how-it-works)] \[[Support the Project](#support-the-project)] \[[Documentation](#documentation)] \[[Deployment Options](#deployment-options)] \[[Demo](https://emanates-demo.netlify.app)]
 
 <br/>
 </div>
@@ -45,12 +46,20 @@ A flow of how Emanates works:
 
 1. [Getting Started](https://emanates.deepjyoti30.dev/docs/getting-started)
 2. [Configuration](https://emanates.deepjyoti30.dev/docs/configuration)
-3. [Deployment Options](https://emanates.deepjyoti30.dev/docs/configuration)
+3. [Deployment Options](https://emanates.deepjyoti30.dev/docs/deployment-options/netlify)
 4. [Writing a post](https://emanates.deepjyoti30.dev/docs/writing-a-post)
 5. [Analytics](https://emanates.deepjyoti30.dev/docs/analytics)
 6. [Comments](https://emanates.deepjyoti30.dev/docs/comments)
 
 Complete documentation is [available here](https://emanates.deepjyoti30.dev)
+
+## Deployment Options
+
+We support deploying to various platforms as well as self deployment. The supported deployment options are:
+
+- [Vercel](https://emanates.deepjyoti30.dev/docs/deployment-options/vercel)
+- [Netlify](https://emanates.deepjyoti30.dev/docs/deployment-options/netlify)
+- [Self Host](https://emanates.deepjyoti30.dev/docs/deployment-options/server)
 
 ## Support the project
 
